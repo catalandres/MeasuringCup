@@ -73,7 +73,8 @@ class MeasureTests: XCTestCase {
     
     func test_HashValue_WorksAsExpected() {
         XCTAssertEqual(fiftycm.hashValue, halfm.hashValue)
-        XCTAssertNotEqual(onekm.hashValue, halfm.hashValue)
+        XCTAssertNotEqual(onem.hashValue, halfm.hashValue)
+        XCTAssertNotEqual(onem.hashValue, onekg.hashValue)
     }
     
     func test_Description_ShouldPrintTheRightProperties() {
