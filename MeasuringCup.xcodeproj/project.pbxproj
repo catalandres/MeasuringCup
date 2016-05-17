@@ -83,6 +83,9 @@
 		41B37EF71CE6C58200F6E5EF /* MeasuringCup */ = {
 			isa = PBXGroup;
 			children = (
+				41B37F151CE79ED300F6E5EF /* Unit.swift */,
+				41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */,
+				41B37F0F1CE6C67C00F6E5EF /* Measure.swift */,
 				41B37F181CE82FDA00F6E5EF /* Properties */,
 				41B37F171CE82F6F00F6E5EF /* Units */,
 				41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */,
@@ -104,8 +107,6 @@
 		41B37F171CE82F6F00F6E5EF /* Units */ = {
 			isa = PBXGroup;
 			children = (
-				41B37F151CE79ED300F6E5EF /* Unit.swift */,
-				41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */,
 			);
 			name = Units;
 			sourceTree = "<group>";
@@ -113,7 +114,6 @@
 		41B37F181CE82FDA00F6E5EF /* Properties */ = {
 			isa = PBXGroup;
 			children = (
-				41B37F0F1CE6C67C00F6E5EF /* Measure.swift */,
 				41B37F221CE8505E00F6E5EF /* Summable.swift */,
 				41B37F201CE84D2D00F6E5EF /* Scalable.swift */,
 			);
@@ -421,6 +421,7 @@
 				41B37F0B1CE6C58300F6E5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41B37F0C1CE6C58300F6E5EF /* Build configuration list for PBXNativeTarget "MeasuringCupTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +430,7 @@
 				41B37F0E1CE6C58300F6E5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

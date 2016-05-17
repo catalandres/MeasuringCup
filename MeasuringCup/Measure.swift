@@ -8,7 +8,7 @@
 
 import Swift
 
-public struct Measure: Comparable, Hashable, Scalable, Summable {
+public struct Measure: Comparable, Hashable, Summable {
     
     static var absoluteTolerance: Double = pow(10, -15)
     static var relativeTolerance: Double = pow(10, -15)
@@ -120,10 +120,6 @@ public func +(lhs: Measure, rhs: Measure) -> Measure? {
     }
     return Measure(quantity: leftBase + rightBase, unit: baseUnit)
 }
-    
-public func -(lhs: Measure, rhs: Measure) -> Measure? {
-    return lhs + (-1) * rhs
-}
 
 // MARK: - Product
 
@@ -132,6 +128,34 @@ public func *(lhs: Measure, rhs: Measure) -> Measure? {
     case (.length, .length):
         if let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity {
             return Measure(quantity: leftBase * rightBase, unit: .squareMeters)
+        }
+    case (.area, .length):
+        if let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity {
+            return Measure(quantity: leftBase * rightBase, unit: .cubicMeters).to(.liters)
+        }
+    case (.length, .area):
+        if let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity {
+            return Measure(quantity: leftBase * rightBase, unit: .cubicMeters).to(.liters)
+        }
+    default:
+        break
+    }
+    return nil
+}
+
+public func /(lhs: Measure, rhs: Measure) -> Measure? {
+    switch (lhs.unit.type, rhs.unit.type) {
+    case (.volume, .length):
+        if let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity {
+            return Measure(quantity: leftBase * 1_000 / rightBase, unit: .squareMeters)
+        }
+    case (.volume, .area):
+        if let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity {
+            return Measure(quantity: leftBase * 1_000 / rightBase, unit: .meters)
+        }
+    case (.area, .length):
+        if let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity {
+            return Measure(quantity: leftBase / rightBase, unit: .meters)
         }
     default:
         break
