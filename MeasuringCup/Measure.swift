@@ -84,7 +84,7 @@ extension Measure {
         guard let baseQuantity = self.baseQuantity, baseUnit = self.unit.type.baseUnit else {
             return self.description.hashValue
         }
-        return (String(format: "%.2f", baseQuantity) + baseUnit.symbol).hashValue
+        return (String(format: "%.8f", baseQuantity) + baseUnit.symbol).hashValue
     }
 }
 
