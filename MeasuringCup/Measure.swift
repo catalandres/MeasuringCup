@@ -65,8 +65,6 @@ public func ==(lhs: Measure, rhs: Measure) -> Bool {
         print("no base quantity")
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
-    print("\(abs(leftBase - rightBase)) <= \(max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase))))")
-//    return leftBase == rightBase
     return abs(leftBase - rightBase) <= max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
 }
 
@@ -85,8 +83,10 @@ public func <(lhs: Measure, rhs: Measure) -> Bool {
 extension Measure {
     public var hashValue: Int {
         guard let base = self.baseQuantity else {
+            print("\(self.quantity) \(self.unit.symbol)")
             return "\(self.quantity) \(self.unit.symbol)".hashValue
         }
+        print(base.hashValue)
         return base.hashValue
     }
 }
