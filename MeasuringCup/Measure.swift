@@ -82,12 +82,10 @@ public func <(lhs: Measure, rhs: Measure) -> Bool {
 
 extension Measure {
     public var hashValue: Int {
-        guard let base = self.baseQuantity else {
-            print("\(self.quantity) \(self.unit.symbol)")
-            return "\(self.quantity) \(self.unit.symbol)".hashValue
+        guard let baseQuantity = self.baseQuantity, baseUnit = self.unit.type.baseUnit else {
+            return self.description.hashValue
         }
-        print(base.hashValue)
-        return base.hashValue
+        return (String(format: "%.2f", baseQuantity) + baseUnit.symbol).hashValue
     }
 }
 
