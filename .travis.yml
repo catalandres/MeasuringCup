@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode7.3
 xcode_project: MeasuringCup.xcodeproj
-xcode_workspace: MeasuringCup.xcworkspace
+# xcode_workspace: MeasuringCup.xcworkspace
 xcode_scheme: MeasuringCup
 xcode_sdk: iphonesimulator9.3
 env:
