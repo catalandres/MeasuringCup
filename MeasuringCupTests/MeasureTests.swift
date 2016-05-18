@@ -11,20 +11,20 @@ import XCTest
 
 class MeasureTests: XCTestCase {
     
-    let onemm = Measure(quantity: 1, unit: .millimeters)
-    let fiftycm = Measure(quantity: 50, unit: .centimeters)
-    let halfm = Measure(quantity: 0.5, unit: .meters)
-    let onekm = Measure(quantity: 1, unit: .kilometers)
-    let onein = Measure(quantity: 1, unit: .inches)
-    let oneft = Measure(quantity: 1, unit: .feet)
-    let oneyd = Measure(quantity: 1, unit: .yards)
-    let onemi = Measure(quantity: 1, unit: .miles)
-    let onem = Measure(quantity: 1, unit: .meters)
+    let onemm = Measure(quantity: Decimal(1), unit: .millimeters)
+    let fiftycm = Measure(quantity: Decimal(50), unit: .centimeters)
+    let halfm = Measure(quantity: Decimal(0.5), unit: .meters)
+    let onekm = Measure(quantity: Decimal(1), unit: .kilometers)
+    let onein = Measure(quantity: Decimal(1), unit: .inches)
+    let oneft = Measure(quantity: Decimal(1), unit: .feet)
+    let oneyd = Measure(quantity: Decimal(1), unit: .yards)
+    let onemi = Measure(quantity: Decimal(1), unit: .miles)
+    let onem = Measure(quantity: Decimal(1), unit: .meters)
     
-    let oneg = Measure(quantity: 1, unit: .grams)
-    let onekg = Measure(quantity: 1, unit: .kilograms)
-    let oneoz = Measure(quantity: 1, unit: .ounces)
-    let onelb = Measure(quantity: 1, unit: .pounds)
+    let oneg = Measure(quantity: Decimal(1), unit: .grams)
+    let onekg = Measure(quantity: Decimal(1), unit: .kilograms)
+    let oneoz = Measure(quantity: Decimal(1), unit: .ounces)
+    let onelb = Measure(quantity: Decimal(1), unit: .pounds)
 
     override func setUp() {
         super.setUp()
@@ -35,7 +35,7 @@ class MeasureTests: XCTestCase {
     }
     
     func test_Init_ShouldInitializeMeasurement() {
-        XCTAssertEqual(fiftycm.quantity, 50)
+        XCTAssertEqual(fiftycm.quantity, Decimal(50))
         XCTAssertEqual(fiftycm.unit, Unit.centimeters)
     }
     
@@ -96,53 +96,53 @@ class MeasureTests: XCTestCase {
     
     func test_Product_WorksBothWays_withInt() {
         let prod1 = onemm * 3
-        XCTAssertEqual(prod1.quantity, 3)
+        XCTAssertEqual(prod1.quantity, Decimal(3))
         XCTAssertEqual(prod1.unit, onemm.unit)
         let prod2 = 3 * onemm
-        XCTAssertEqual(prod2.quantity, 3)
+        XCTAssertEqual(prod2.quantity, Decimal(3))
         XCTAssertEqual(prod2.unit, onemm.unit)
     }
 
     func test_Product_WorksBothWays_withFloat() {
         let prod1 = onemm * Float(3)
-        XCTAssertEqual(prod1.quantity, 3)
+        XCTAssertEqual(prod1.quantity, Decimal(3))
         XCTAssertEqual(prod1.unit, onemm.unit)
         let prod2 = Float(3) * onemm
-        XCTAssertEqual(prod2.quantity, 3)
+        XCTAssertEqual(prod2.quantity, Decimal(3))
         XCTAssertEqual(prod2.unit, onemm.unit)
     }
 
     func test_Product_WorksBothWays_withDouble() {
         let prod1 = onemm * Double(3)
-        XCTAssertEqual(prod1.quantity, 3)
+        XCTAssertEqual(prod1.quantity, Decimal(3))
         XCTAssertEqual(prod1.unit, onemm.unit)
         let prod2 = Double(3) * onemm
-        XCTAssertEqual(prod2.quantity, 3)
+        XCTAssertEqual(prod2.quantity, Decimal(3))
         XCTAssertEqual(prod2.unit, onemm.unit)
     }
 
     func test_Sum_ShouldWorkWithSameUnit() {
         let sum = onem + halfm
-        XCTAssertEqual(sum, Measure(quantity: 1.5, unit: .meters))
+        XCTAssertEqual(sum, Measure(quantity: Decimal(1.5), unit: .meters))
     }
     
     func test_Sum_ShouldWorkWithDifferentUnits() {
         let sum = halfm + onekm
-        XCTAssertEqual(sum, Measure(quantity: 1000.5, unit: .meters))
+        XCTAssertEqual(sum, Measure(quantity: Decimal(1000.5), unit: .meters))
     }
     
     func test_Difference_ShouldWorkWithSameUnit() {
         let sum = halfm - onem
-        XCTAssertEqual(sum, Measure(quantity: -0.5, unit: .meters))
+        XCTAssertEqual(sum, Measure(quantity: Decimal(-0.5), unit: .meters))
     }
     
     func test_Difference_ShouldWorkWithDifferentUnits() {
         let sum = onekm - halfm
-        XCTAssertEqual(sum, Measure(quantity: 999.5, unit: .meters))
+        XCTAssertEqual(sum, Measure(quantity: Decimal(999.5), unit: .meters))
     }
     
     func test_To_() {
         let to = halfm.to(.millimeters)
-        XCTAssertEqual(to, Measure(quantity: 500, unit: .millimeters))
+        XCTAssertEqual(to, Measure(quantity: Decimal(500), unit: .millimeters))
     }
 }

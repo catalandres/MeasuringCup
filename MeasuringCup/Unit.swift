@@ -41,71 +41,71 @@ public enum Unit {
     public var convertible: Bool {
         return self.factor != nil
     }
-    public var factor: Double? {
+    public var factor: Decimal? {
         return Unit.values(self).factor
     }
     public var symbol: String {
         return Unit.values(self).symbol
     }
     
-    static private func values(unit: Unit) -> (type: UnitType, factor: Double?, symbol: String) {
+    static private func values(unit: Unit) -> (type: UnitType, factor: Decimal?, symbol: String) {
         // MARK: - Constants
-        let ft👉🏻m: Double = 0.3048
-        let lb👉🏻g: Double = 453.59237
-        let l👉🏻m³: Double = pow(10, -3)
-        let gal👉🏻m³: Double = 231 * pow(ft👉🏻m / 12, 3)
+        let ft👉🏻m = Decimal(0.3048)
+        let lb👉🏻g = Decimal(453.59237)
+        let l👉🏻m³ = Decimal(tenTo: -3)
+        let gal👉🏻m³: Decimal = 231 * ((ft👉🏻m / 12) ^ 3)
         
         switch unit {
         // MARK: - Length
         case .yoctometers:
-            return (.length, pow(10, -24), "ym")
+            return (.length, Decimal(tenTo: -24), "ym")
         case .zeptometers:
-            return (.length, pow(10, -21), "zm")
+            return (.length, Decimal(tenTo: -21), "zm")
         case .attometers:
-            return (.length, pow(10, -18), "am")
+            return (.length, Decimal(tenTo: -18), "am")
         case .femtometers:
-            return (.length, pow(10, -15), "fm")
+            return (.length, Decimal(tenTo: -15), "fm")
         case .picometers:
-            return (.length, pow(10, -12), "pm")
+            return (.length, Decimal(tenTo: -12), "pm")
         case .nanometers:
-            return (.length, pow(10, -9), "nm")
+            return (.length, Decimal(tenTo: -9), "nm")
         case .micrometers:
-            return (.length, pow(10, -6), "μm")
+            return (.length, Decimal(tenTo: -6), "μm")
         case .millimeters:
-            return (.length, pow(10, -3), "mm")
+            return (.length, Decimal(tenTo: -3), "mm")
         case .centimeters:
-            return (.length, pow(10, -2), "cm")
+            return (.length, Decimal(tenTo: -2), "cm")
         case .decimeters:
-            return (.length, pow(10, -1), "dm")
+            return (.length, Decimal(tenTo: -1), "dm")
         case .meters:
-            return (.length, pow(10, 0), "m")
+            return (.length, Decimal(tenTo: 0), "m")
         case .decameters:
-            return (.length, pow(10, 1), "dam")
+            return (.length, Decimal(tenTo: 1), "dam")
         case .hectometers:
-            return (.length, pow(10, 2), "hm")
+            return (.length, Decimal(tenTo: 2), "hm")
         case .kilometers:
-            return (.length, pow(10, 3), "km")
+            return (.length, Decimal(tenTo: 3), "km")
         case .megameters:
-            return (.length, pow(10, 6), "Mm")
+            return (.length, Decimal(tenTo: 6), "Mm")
         case .gigameters:
-            return (.length, pow(10, 9), "Gm")
+            return (.length, Decimal(tenTo: 9), "Gm")
         case .terameters:
-            return (.length, pow(10, 12), "Tm")
+            return (.length, Decimal(tenTo: 12), "Tm")
         case .petameters:
-            return (.length, pow(10, 15), "Pm")
+            return (.length, Decimal(tenTo: 15), "Pm")
         case .exameters:
-            return (.length, pow(10, 18), "Em")
+            return (.length, Decimal(tenTo: 18), "Em")
         case .zettameters:
-            return (.length, pow(10, 21), "Zm")
+            return (.length, Decimal(tenTo: 21), "Zm")
         case .yottameters:
-            return (.length, pow(10, 24), "Ym")
+            return (.length, Decimal(tenTo: 24), "Ym")
             
         case .fermis:
-            return (.length, pow(10, -15), "fm")
+            return (.length, Decimal(tenTo: -15), "fm")
         case .ångströms:
-            return (.length, pow(10, -10), "Å")
+            return (.length, Decimal(tenTo: -10), "Å")
         case .microns:
-            return (.length, pow(10, -6), "μm")
+            return (.length, Decimal(tenTo: -6), "μm")
             
         case .inches:
             return (.length, ft👉🏻m / 12, "in")
@@ -129,57 +129,57 @@ public enum Unit {
         case .fathoms:
             return (.length, ft👉🏻m * 6, "fath")
         case .nauticalMiles:
-            return (.length, 1852, "nmi")
+            return (.length, Decimal(1852), "nmi")
             
         //MARK: - Mass
         case .yoctograms:
-            return (.mass, pow(10, -24), "yg")
+            return (.mass, Decimal(tenTo: -24), "yg")
         case .zeptograms:
-            return (.mass, pow(10, -21), "zg")
+            return (.mass, Decimal(tenTo: -21), "zg")
         case .attograms:
-            return (.mass, pow(10, -18), "ag")
+            return (.mass, Decimal(tenTo: -18), "ag")
         case .femtograms:
-            return (.mass, pow(10, -15), "fg")
+            return (.mass, Decimal(tenTo: -15), "fg")
         case .picograms:
-            return (.mass, pow(10, -12), "pg")
+            return (.mass, Decimal(tenTo: -12), "pg")
         case .nanograms:
-            return (.mass, pow(10, -9), "ng")
+            return (.mass, Decimal(tenTo: -9), "ng")
         case .micrograms:
-            return (.mass, pow(10, -6), "μg")
+            return (.mass, Decimal(tenTo: -6), "μg")
         case .milligrams:
-            return (.mass, pow(10, -3), "mg")
+            return (.mass, Decimal(tenTo: -3), "mg")
         case .centigrams:
-            return (.mass, pow(10, -2), "cg")
+            return (.mass, Decimal(tenTo: -2), "cg")
         case .decigrams:
-            return (.mass, pow(10, -1), "dg")
+            return (.mass, Decimal(tenTo: -1), "dg")
         case .grams:
-            return (.mass, pow(10, 0), "g")
+            return (.mass, Decimal(tenTo: 0), "g")
         case .decagrams:
-            return (.mass, pow(10, 1), "dag")
+            return (.mass, Decimal(tenTo: 1), "dag")
         case .hectograms:
-            return (.mass, pow(10, 2), "hg")
+            return (.mass, Decimal(tenTo: 2), "hg")
         case .kilograms:
-            return (.mass, pow(10, 3), "kg")
+            return (.mass, Decimal(tenTo: 3), "kg")
         case .megagrams:
-            return (.mass, pow(10, 6), "Mg")
+            return (.mass, Decimal(tenTo: 6), "Mg")
         case .gigagrams:
-            return (.mass, pow(10, 9), "Gg")
+            return (.mass, Decimal(tenTo: 9), "Gg")
         case .teragrams:
-            return (.mass, pow(10, 12), "Tg")
+            return (.mass, Decimal(tenTo: 12), "Tg")
         case .petagrams:
-            return (.mass, pow(10, 15), "Pg")
+            return (.mass, Decimal(tenTo: 15), "Pg")
         case .exagrams:
-            return (.mass, pow(10, 18), "Eg")
+            return (.mass, Decimal(tenTo: 18), "Eg")
         case .zettagrams:
-            return (.mass, pow(10, 21), "Zg")
+            return (.mass, Decimal(tenTo: 21), "Zg")
         case .yottagrams:
-            return (.mass, pow(10, 24), "Yg")
+            return (.mass, Decimal(tenTo: 24), "Yg")
 
         case .metricTons:
-            return (.mass, pow(10, 6), "t")
+            return (.mass, Decimal(tenTo: 6), "t")
 
         case .carats:
-            return (.mass, 200 * pow(10, -3), "c")
+            return (.mass, 200 * Decimal(tenTo: -3), "c")
         case .grains:
             return (.mass, lb👉🏻g / 7000, "gr")
         case .drams:
@@ -222,168 +222,168 @@ public enum Unit {
             
         //MARK: - Area
         case .squareYoctometers:
-            return (.area, pow(10, -48), "ym²")
+            return (.area, Decimal(tenTo: -48), "ym²")
         case .squareZeptometers:
-            return (.area, pow(10, -42), "zm²")
+            return (.area, Decimal(tenTo: -42), "zm²")
         case .squareAttometers:
-            return (.area, pow(10, -36), "am²")
+            return (.area, Decimal(tenTo: -36), "am²")
         case .squareFemtometers:
-            return (.area, pow(10, -30), "fm²")
+            return (.area, Decimal(tenTo: -30), "fm²")
         case .squarePicometers:
-            return (.area, pow(10, -24), "pm²")
+            return (.area, Decimal(tenTo: -24), "pm²")
         case .squareNanometers:
-            return (.area, pow(10, -18), "nm²")
+            return (.area, Decimal(tenTo: -18), "nm²")
         case .squareMicrometers:
-            return (.area, pow(10, -12), "μm²")
+            return (.area, Decimal(tenTo: -12), "μm²")
         case .squareMillimeters:
-            return (.area, pow(10, -6), "mm²")
+            return (.area, Decimal(tenTo: -6), "mm²")
         case .squareCentimeters:
-            return (.area, pow(10, -4), "cm²")
+            return (.area, Decimal(tenTo: -4), "cm²")
         case .squareDecimeters:
-            return (.area, pow(10, -2), "dm²")
+            return (.area, Decimal(tenTo: -2), "dm²")
         case .squareMeters:
-            return (.area, pow(10, 0), "m²")
+            return (.area, Decimal(tenTo: 0), "m²")
         case .squareDecameters:
-            return (.area, pow(10, 2), "dam²")
+            return (.area, Decimal(tenTo: 2), "dam²")
         case .squareHectometers:
-            return (.area, pow(10, 4), "hm²")
+            return (.area, Decimal(tenTo: 4), "hm²")
         case .squareKilometers:
-            return (.area, pow(10, 6), "km²")
+            return (.area, Decimal(tenTo: 6), "km²")
         case .squareMegameters:
-            return (.area, pow(10, 12), "Mm²")
+            return (.area, Decimal(tenTo: 12), "Mm²")
         case .squareGigameters:
-            return (.area, pow(10, 18), "Gm²")
+            return (.area, Decimal(tenTo: 18), "Gm²")
         case .squareTerameters:
-            return (.area, pow(10, 24), "Tm²")
+            return (.area, Decimal(tenTo: 24), "Tm²")
         case .squarePetameters:
-            return (.area, pow(10, 30), "Pm²")
+            return (.area, Decimal(tenTo: 30), "Pm²")
         case .squareExameters:
-            return (.area, pow(10, 36), "Em²")
+            return (.area, Decimal(tenTo: 36), "Em²")
         case .squareZettameters:
-            return (.area, pow(10, 42), "Zm²")
+            return (.area, Decimal(tenTo: 42), "Zm²")
         case .squareYottameters:
-            return (.area, pow(10, 48), "Ym²")
+            return (.area, Decimal(tenTo: 48), "Ym²")
             
         case .centiares:
-            return (.area, pow(10, 0), "ca")
+            return (.area, Decimal(tenTo: 0), "ca")
         case .deciares:
-            return (.area, pow(10, 1), "da")
+            return (.area, Decimal(tenTo: 1), "da")
         case .ares:
-            return (.area, pow(10, 2), "a")
+            return (.area, Decimal(tenTo: 2), "a")
         case .decares:
-            return (.area, pow(10, 3), "daa")
+            return (.area, Decimal(tenTo: 3), "daa")
         case .hectares:
-            return (.area, pow(10, 4), "ha")
+            return (.area, Decimal(tenTo: 4), "ha")
             
         case .acres:
-            return (.area, pow(ft👉🏻m * 5280, 2) / 640, "ac")
+            return (.area, ((ft👉🏻m * 5280) ^ 2) / 640, "ac")
             
         case .squareInches:
-            return (.area, pow(ft👉🏻m / 12, 2), "in²")
+            return (.area, (ft👉🏻m / 12) ^ 2, "in²")
         case .squareFeet:
-            return (.area, pow(ft👉🏻m, 2), "ft²")
+            return (.area, ft👉🏻m ^ 2, "ft²")
         case .squareYards:
-            return (.area, pow(ft👉🏻m * 3, 2), "yd²")
+            return (.area, (ft👉🏻m * 3) ^ 2, "yd²")
         case .squareMiles:
-            return (.area, pow(ft👉🏻m * 5280, 2), "mi²")
+            return (.area, (ft👉🏻m * 5280) ^ 2, "mi²")
         case .squareRods:
-            return (.area, pow(ft👉🏻m * 16.5, 2), "rd²")
+            return (.area, (ft👉🏻m * 16.5) ^ 2, "rd²")
             
         // MARK: - Volume
         case .cubicYoctometers:
-            return (.volume, pow(10, -72), "ym³")
+            return (.volume, Decimal(tenTo: -72), "ym³")
         case .cubicZeptometers:
-            return (.volume, pow(10, -63), "zm³")
+            return (.volume, Decimal(tenTo: -63), "zm³")
         case .cubicAttometers:
-            return (.volume, pow(10, -54), "am³")
+            return (.volume, Decimal(tenTo: -54), "am³")
         case .cubicFemtometers:
-            return (.volume, pow(10, -45), "fm³")
+            return (.volume, Decimal(tenTo: -45), "fm³")
         case .cubicPicometers:
-            return (.volume, pow(10, -36), "pm³")
+            return (.volume, Decimal(tenTo: -36), "pm³")
         case .cubicNanometers:
-            return (.volume, pow(10, -27), "nm³")
+            return (.volume, Decimal(tenTo: -27), "nm³")
         case .cubicMicrometers:
-            return (.volume, pow(10, -18), "μm³")
+            return (.volume, Decimal(tenTo: -18), "μm³")
         case .cubicMillimeters:
-            return (.volume, pow(10, -9), "mm³")
+            return (.volume, Decimal(tenTo: -9), "mm³")
         case .cubicCentimeters:
-            return (.volume, pow(10, -6), "cm³")
+            return (.volume, Decimal(tenTo: -6), "cm³")
         case .cubicDecimeters:
-            return (.volume, pow(10, -3), "dm³")
+            return (.volume, Decimal(tenTo: -3), "dm³")
         case .cubicMeters:
-            return (.volume, pow(10, 0), "m³")
+            return (.volume, Decimal(tenTo: 0), "m³")
         case .cubicDecameters:
-            return (.volume, pow(10, 3), "dam³")
+            return (.volume, Decimal(tenTo: 3), "dam³")
         case .cubicHectometers:
-            return (.volume, pow(10, 6), "hm³")
+            return (.volume, Decimal(tenTo: 6), "hm³")
         case .cubicKilometers:
-            return (.volume, pow(10, 9), "km³")
+            return (.volume, Decimal(tenTo: 9), "km³")
         case .cubicMegameters:
-            return (.volume, pow(10, 18), "Mm³")
+            return (.volume, Decimal(tenTo: 18), "Mm³")
         case .cubicGigameters:
-            return (.volume, pow(10, 27), "Gm³")
+            return (.volume, Decimal(tenTo: 27), "Gm³")
         case .cubicTerameters:
-            return (.volume, pow(10, 36), "Tm³")
+            return (.volume, Decimal(tenTo: 36), "Tm³")
         case .cubicPetameters:
-            return (.volume, pow(10, 45), "Pm³")
+            return (.volume, Decimal(tenTo: 45), "Pm³")
         case .cubicExameters:
-            return (.volume, pow(10, 54), "Em³")
+            return (.volume, Decimal(tenTo: 54), "Em³")
         case .cubicZettameters:
-            return (.volume, pow(10, 63), "Zm³")
+            return (.volume, Decimal(tenTo: 63), "Zm³")
         case .cubicYottameters:
-            return (.volume, pow(10, 72), "Ym³")
+            return (.volume, Decimal(tenTo: 72), "Ym³")
             
         case .yoctoliters:
-            return (.volume, l👉🏻m³ * pow(10, -24), "yl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -24), "yl")
         case .zeptoliters:
-            return (.volume, l👉🏻m³ * pow(10, -21), "zl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -21), "zl")
         case .attoliters:
-            return (.volume, l👉🏻m³ * pow(10, -18), "al")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -18), "al")
         case .femtoliters:
-            return (.volume, l👉🏻m³ * pow(10, -15), "fl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -15), "fl")
         case .picoliters:
-            return (.volume, l👉🏻m³ * pow(10, -12), "pl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -12), "pl")
         case .nanoliters:
-            return (.volume, l👉🏻m³ * pow(10, -9), "nl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -9), "nl")
         case .microliters:
-            return (.volume, l👉🏻m³ * pow(10, -6), "μl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -6), "μl")
         case .milliliters:
-            return (.volume, l👉🏻m³ * pow(10, -3), "ml")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -3), "ml")
         case .centiliters:
-            return (.volume, l👉🏻m³ * pow(10, -2), "cl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -2), "cl")
         case .deciliters:
-            return (.volume, l👉🏻m³ * pow(10, -1), "dl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: -1), "dl")
         case .liters:
-            return (.volume, l👉🏻m³ * pow(10, 0), "l")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 0), "l")
         case .decaliters:
-            return (.volume, l👉🏻m³ * pow(10, 1), "dal")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 1), "dal")
         case .hectoliters:
-            return (.volume, l👉🏻m³ * pow(10, 2), "hl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 2), "hl")
         case .kiloliters:
-            return (.volume, l👉🏻m³ * pow(10, 3), "kl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 3), "kl")
         case .megaliters:
-            return (.volume, l👉🏻m³ * pow(10, 6), "Ml")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 6), "Ml")
         case .gigaliters:
-            return (.volume, l👉🏻m³ * pow(10, 9), "Gl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 9), "Gl")
         case .teraliters:
-            return (.volume, l👉🏻m³ * pow(10, 12), "Tl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 12), "Tl")
         case .petaliters:
-            return (.volume, l👉🏻m³ * pow(10, 15), "Pl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 15), "Pl")
         case .exaliters:
-            return (.volume, l👉🏻m³ * pow(10, 18), "El")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 18), "El")
         case .zettaliters:
-            return (.volume, l👉🏻m³ * pow(10, 21), "Zl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 21), "Zl")
         case .yottaliters:
-            return (.volume, l👉🏻m³ * pow(10, 24), "Yl")
+            return (.volume, l👉🏻m³ * Decimal(tenTo: 24), "Yl")
     
         case .cubicInches:
-            return (.volume, pow(ft👉🏻m / 12, 3), "in³")
+            return (.volume, (ft👉🏻m / 12) ^ 3, "in³")
         case .cubicFeet:
-            return (.volume, pow(ft👉🏻m, 3), "ft³")
+            return (.volume, ft👉🏻m ^ 3, "ft³")
         case .cubicYards:
-            return (.volume, pow(ft👉🏻m * 3, 3), "yd³")
+            return (.volume, (ft👉🏻m * 3) ^ 3, "yd³")
         case .cubicMiles:
-            return (.volume, pow(ft👉🏻m * 5280, 3), "mi³")
+            return (.volume, (ft👉🏻m * 5280) ^ 3, "mi³")
             
         case .minims:
             return (.volume, gal👉🏻m³ / 1024 / 60, "min")
@@ -402,7 +402,7 @@ public enum Unit {
         case .gallons:
             return (.volume, gal👉🏻m³, "gal")
         case .cords:
-            return (.volume, 128 * pow(ft👉🏻m, 3), "cd")
+            return (.volume, 128 * (ft👉🏻m ^ 3), "cd")
         case .pecks:
             return (.volume, 2 * gal👉🏻m³, "pk")
         case .bushels:

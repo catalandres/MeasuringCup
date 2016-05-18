@@ -159,7 +159,7 @@ class NIST44Tests: XCTestCase {
     
     func test_C6_avoirdupoisMass() {
             // Untested: 1 microlb = 0.000001 lb
-        XCTAssertEqual(Measure(quantity: 27 + 11/32, unit: .grains), Measure(quantity: 1, unit: .drams))
+        XCTAssertEqual(Measure(quantity: 27.0 + 11/32, unit: .grains), Measure(quantity: 1, unit: .drams))
         XCTAssertEqual(Measure(quantity: 16, unit: .drams), Measure(quantity: 1, unit: .ounces))
         XCTAssertEqual(Measure(quantity: 16, unit: .drams), Measure(quantity: 437.5, unit: .grains))
         XCTAssertEqual(Measure(quantity: 16, unit: .ounces), Measure(quantity: 1, unit: .pounds))
@@ -257,7 +257,7 @@ class NIST44Tests: XCTestCase {
     func test_C19_volume() {
         XCTAssertEqual(Measure(quantity: 1, unit: .tablespoons), Measure(quantity: 3, unit: .teaspoons))
         XCTAssertEqual(Measure(quantity: 1, unit: .tablespoons), Measure(quantity: 0.5, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 1, unit: .teaspoons), Measure(quantity: 1/3, unit: .tablespoons))
+        XCTAssertEqual(Measure(quantity: 1, unit: .teaspoons), Measure(quantity: 1.0/3, unit: .tablespoons))
     }
     
     func test_C19_mass() {

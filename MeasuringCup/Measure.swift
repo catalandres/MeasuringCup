@@ -9,13 +9,13 @@ import Swift
 
 public struct Measure: Comparable, Hashable, Summable {
     
-    static var absoluteTolerance: Double = pow(10, -15)
+    static var absoluteTolerance: Double = pow(10, -30)
     static var relativeTolerance: Double = pow(10, -15)
     
-    let quantity: Double
+    let quantity: Decimal
     let unit: Unit
 
-    public var baseQuantity: Double? {
+    public var baseQuantity: Decimal? {
         guard let factor = self.unit.factor else {
             return nil
         }
@@ -37,6 +37,12 @@ public struct Measure: Comparable, Hashable, Summable {
         }
         return Measure(quantity: quantity * factorFrom / factorTo, unit: unit)
     }
+    
+    public init(quantity: Number, unit: Unit) {
+        self.quantity = Decimal(quantity)
+        self.unit = unit
+    }
+    
 }
 
 // MARK: - CustomStringConvertible
@@ -44,10 +50,10 @@ public struct Measure: Comparable, Hashable, Summable {
 extension Measure: CustomStringConvertible {
     public var description: String {
         let quantityString: String
-        if self.quantity % 1 == 0 {
-            quantityString = String(Int(self.quantity))
+        if self.quantity.number % 1 == 0 {
+            quantityString = String(self.quantity)
         } else {
-            quantityString = String(format: "%.2f", self.quantity)
+            quantityString = String(format: "%.2f", self.quantity.number)
         }
         return "\(quantityString) \(self.unit.symbol)"
     }
@@ -56,15 +62,16 @@ extension Measure: CustomStringConvertible {
 // MARK: - Comparable
 
 public func ==(lhs: Measure, rhs: Measure) -> Bool {
+    print("\(lhs) =? \(rhs)")
     guard lhs.unit.type == rhs.unit.type else {
-        print("not the same type")
         return false
     }
     guard let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity else {
-        print("no base quantity")
+        print("one of the base quantities is not set")
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
-    return abs(leftBase - rightBase) <= max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
+    print(">>> \(leftBase) vs \(rightBase)")
+    return abs((leftBase - rightBase).number) <= max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase.number), abs(rightBase.number)))
 }
 
 public func <(lhs: Measure, rhs: Measure) -> Bool {
@@ -84,7 +91,7 @@ extension Measure {
         guard let baseQuantity = self.baseQuantity, baseUnit = self.unit.type.baseUnit else {
             return self.description.hashValue
         }
-        return (String(format: "%.8f", baseQuantity) + baseUnit.symbol).hashValue
+        return (String(baseQuantity) + baseUnit.symbol).hashValue
     }
 }
 

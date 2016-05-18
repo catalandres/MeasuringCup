@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414408D51CECDC2700898555 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408D41CECDC2700898555 /* Decimal.swift */; };
+		414408D71CECDCC400898555 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408D61CECDCC400898555 /* Number.swift */; };
+		414408D91CECDE1100898555 /* DecimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408D81CECDE1100898555 /* DecimalTests.swift */; };
 		41B37EF91CE6C58200F6E5EF /* MeasuringCup.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41B37F001CE6C58200F6E5EF /* MeasuringCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */; };
 		41B37F101CE6C67C00F6E5EF /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F0F1CE6C67C00F6E5EF /* Measure.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		414408D41CECDC2700898555 /* Decimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
+		414408D61CECDCC400898555 /* Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		414408D81CECDE1100898555 /* DecimalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecimalTests.swift; path = ../MeasuringCup/DecimalTests.swift; sourceTree = "<group>"; };
 		41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeasuringCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuringCup.h; sourceTree = "<group>"; };
 		41B37EFA1CE6C58200F6E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 				41B37F171CE82F6F00F6E5EF /* Units */,
 				41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */,
 				41B37EFA1CE6C58200F6E5EF /* Info.plist */,
+				414408D41CECDC2700898555 /* Decimal.swift */,
+				414408D61CECDCC400898555 /* Number.swift */,
 			);
 			path = MeasuringCup;
 			sourceTree = "<group>";
@@ -97,6 +105,7 @@
 		41B37F031CE6C58200F6E5EF /* MeasuringCupTests */ = {
 			isa = PBXGroup;
 			children = (
+				414408D81CECDE1100898555 /* DecimalTests.swift */,
 				41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */,
 				41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */,
 				41B37F061CE6C58300F6E5EF /* Info.plist */,
@@ -229,8 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B37F211CE84D2D00F6E5EF /* Scalable.swift in Sources */,
+				414408D71CECDCC400898555 /* Number.swift in Sources */,
 				41B37F2B1CE8B5C100F6E5EF /* UnitType.swift in Sources */,
 				41B37F161CE79ED300F6E5EF /* Unit.swift in Sources */,
+				414408D51CECDC2700898555 /* Decimal.swift in Sources */,
 				41B37F101CE6C67C00F6E5EF /* Measure.swift in Sources */,
 				41B37F231CE8505E00F6E5EF /* Summable.swift in Sources */,
 			);
@@ -242,6 +253,7 @@
 			files = (
 				41B37F141CE6D95A00F6E5EF /* MeasureTests.swift in Sources */,
 				41B37F2D1CEA24B200F6E5EF /* NIST44Tests.swift in Sources */,
+				414408D91CECDE1100898555 /* DecimalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
