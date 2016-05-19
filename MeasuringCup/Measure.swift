@@ -64,7 +64,8 @@ public func ==(lhs: Measure, rhs: Measure) -> Bool {
         print("no base quantity")
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
-    return abs(leftBase - rightBase) <= max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
+    let epsilon = max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
+    return abs(leftBase - rightBase) <= epsilon
 }
 
 public func <(lhs: Measure, rhs: Measure) -> Bool {
@@ -74,7 +75,8 @@ public func <(lhs: Measure, rhs: Measure) -> Bool {
     guard let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity else {
         return lhs.unit == rhs.unit && lhs.quantity < rhs.quantity
     }
-    return leftBase < rightBase
+    let epsilon = max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
+    return leftBase - rightBase < epsilon && abs(leftBase - rightBase) > epsilon
 }
 
 // MARK: - Hashable
