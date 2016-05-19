@@ -53,7 +53,7 @@ class NIST44Tests: XCTestCase {
         XCTAssertEqual(Measure(quantity: 10, unit: .hectoliters), Measure(quantity: 1000, unit: .liters))
     }
 
-    // Pages C-4, Units of Volume
+    // Page C-4, Units of Volume
     func test_C4_volume() {
         XCTAssertEqual(Measure(quantity: 1000, unit: .cubicMillimeters), Measure(quantity: 1, unit: .cubicCentimeters))
         XCTAssertEqual(Measure(quantity: 1000, unit: .cubicCentimeters), Measure(quantity: 1, unit: .cubicDecimeters))
@@ -63,7 +63,7 @@ class NIST44Tests: XCTestCase {
         XCTAssertEqual(Measure(quantity: 1000, unit: .cubicDecimeters), Measure(quantity: 1000000000, unit: .cubicMillimeters))
     }
     
-    // Pages C-4, Units of Mass
+    // Page C-4, Units of Mass
     func test_C4_mass() {
         XCTAssertEqual(Measure(quantity: 10, unit: .milligrams), Measure(quantity: 1, unit: .centigrams))
         XCTAssertEqual(Measure(quantity: 10, unit: .centigrams), Measure(quantity: 1, unit: .decigrams))
@@ -118,42 +118,42 @@ class NIST44Tests: XCTestCase {
     }
     
     func test_C5_USliquidVolume() {
-        XCTAssertEqual(Measure(quantity: 4, unit: .gills), Measure(quantity: 1, unit: .pints))
-        XCTAssertEqual(Measure(quantity: 4, unit: .gills), Measure(quantity: 28.875, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 1, unit: .quarts))
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 57.75, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 1, unit: .gallons))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 231, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 8, unit: .pints))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 32, unit: .gills))
+        XCTAssertEqual(Measure(quantity: 4, unit: .gills(.american)), Measure(quantity: 1, unit: .pints(.american)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .gills(.american)), Measure(quantity: 28.875, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 1, unit: .quarts(.american)))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 57.75, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 1, unit: .gallons(.american)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 231, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 8, unit: .pints(.american)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 32, unit: .gills(.american)))
     }
     
     func test_C5_apothecariesLiquidVolume() {
-        XCTAssertEqual(Measure(quantity: 60, unit: .minims), Measure(quantity: 1, unit: .fluidDrams))
-        XCTAssertEqual(Measure(quantity: 60, unit: .minims), Measure(quantity: 0.2255859375, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 8, unit: .fluidDrams), Measure(quantity: 1, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 8, unit: .fluidDrams), Measure(quantity: 1.8046875, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 16, unit: .fluidOunces), Measure(quantity: 1, unit: .pints))
-        XCTAssertEqual(Measure(quantity: 16, unit: .fluidOunces), Measure(quantity: 28.875, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 16, unit: .fluidOunces), Measure(quantity: 128, unit: .fluidDrams))
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 1, unit: .quarts))
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 57.75, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 256, unit: .fluidDrams))
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 32, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 1, unit: .gallons))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 231, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 1024, unit: .fluidDrams))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quarts), Measure(quantity: 128, unit: .fluidOunces))
+        XCTAssertEqual(Measure(quantity: 60, unit: .minims(.american)), Measure(quantity: 1, unit: .fluidDrams(.american)))
+        XCTAssertEqual(Measure(quantity: 60, unit: .minims(.american)), Measure(quantity: 0.2255859375, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 8, unit: .fluidDrams(.american)), Measure(quantity: 1, unit: .fluidOunces(.american)))
+        XCTAssertEqual(Measure(quantity: 8, unit: .fluidDrams(.american)), Measure(quantity: 1.8046875, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 16, unit: .fluidOunces(.american)), Measure(quantity: 1, unit: .pints(.american)))
+        XCTAssertEqual(Measure(quantity: 16, unit: .fluidOunces(.american)), Measure(quantity: 28.875, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 16, unit: .fluidOunces(.american)), Measure(quantity: 128, unit: .fluidDrams(.american)))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 1, unit: .quarts(.american)))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 57.75, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 256, unit: .fluidDrams(.american)))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 32, unit: .fluidOunces(.american)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 1, unit: .gallons(.american)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 231, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 1024, unit: .fluidDrams(.american)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarts(.american)), Measure(quantity: 128, unit: .fluidOunces(.american)))
     }
     
     func test_C6_USdryVolume() {
-        XCTAssertEqual(Measure(quantity: 2, unit: .pints), Measure(quantity: 1, unit: .quarts))
+        XCTAssertEqual(Measure(quantity: 2, unit: .pints(.american)), Measure(quantity: 1, unit: .quarts(.american)))
             // Untested: 2 pints = 67.2006 (dry) cubic inches
-        XCTAssertEqual(Measure(quantity: 8, unit: .quarts), Measure(quantity: 1, unit: .pecks))
-        XCTAssertEqual(Measure(quantity: 8, unit: .quarts), Measure(quantity: 16, unit: .pints))
+        XCTAssertEqual(Measure(quantity: 8, unit: .quarts(.american)), Measure(quantity: 1, unit: .pecks))
+        XCTAssertEqual(Measure(quantity: 8, unit: .quarts(.american)), Measure(quantity: 16, unit: .pints(.american)))
             // Untested: 8 quarts = 537.605 (dry) cubic inches
         XCTAssertEqual(Measure(quantity: 4, unit: .pecks), Measure(quantity: 1, unit: .bushels))
-        XCTAssertEqual(Measure(quantity: 4, unit: .pecks), Measure(quantity: 32, unit: .quarts))
+        XCTAssertEqual(Measure(quantity: 4, unit: .pecks), Measure(quantity: 32, unit: .quarts(.american)))
             // Untested: 4 pecks = 2150.42 (dry) cubic inches
     }
     
@@ -165,9 +165,9 @@ class NIST44Tests: XCTestCase {
         XCTAssertEqual(Measure(quantity: 16, unit: .ounces), Measure(quantity: 1, unit: .pounds))
         XCTAssertEqual(Measure(quantity: 16, unit: .ounces), Measure(quantity: 256, unit: .drams))
         XCTAssertEqual(Measure(quantity: 16, unit: .ounces), Measure(quantity: 7_000, unit: .grains))
-        XCTAssertEqual(Measure(quantity: 100, unit: .pounds), Measure(quantity: 1, unit: .hundredweightsUS))
-        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweightsUS), Measure(quantity: 1, unit: .tonsUS))
-        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweightsUS), Measure(quantity: 2_000, unit: .pounds))
+        XCTAssertEqual(Measure(quantity: 100, unit: .pounds), Measure(quantity: 1, unit: .hundredweights(.american)))
+        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweights(.american)), Measure(quantity: 1, unit: .tons(.american)))
+        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweights(.american)), Measure(quantity: 2_000, unit: .pounds))
         XCTAssertEqual(Measure(quantity: 112, unit: .pounds), Measure(quantity: 1, unit: .longHundredweights))
         XCTAssertEqual(Measure(quantity: 20, unit: .longHundredweights), Measure(quantity: 1, unit: .longTons))
         XCTAssertEqual(Measure(quantity: 20, unit: .longHundredweights), Measure(quantity: 2_240, unit: .pounds))
@@ -195,17 +195,18 @@ class NIST44Tests: XCTestCase {
     }
     
     func test_C7_massBritish() {
-        XCTAssertEqual(Measure(quantity: 14, unit: .pounds), Measure(quantity: 1, unit: .stones))
-        XCTAssertEqual(Measure(quantity: 2, unit: .stones), Measure(quantity: 1, unit: .quartersUK))
-        XCTAssertEqual(Measure(quantity: 2, unit: .stones), Measure(quantity: 28, unit: .pounds))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quartersUK), Measure(quantity: 1, unit: .hundredweightsUK))
-        XCTAssertEqual(Measure(quantity: 4, unit: .quartersUK), Measure(quantity: 112, unit: .pounds))
-        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweightsUK), Measure(quantity: 1, unit: .tonsUK))
-        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweightsUK), Measure(quantity: 2240, unit: .pounds))
+        XCTAssertEqual(Measure(quantity: 14, unit: .pounds), Measure(quantity: 1, unit: .stone))
+        XCTAssertEqual(Measure(quantity: 2, unit: .stone), Measure(quantity: 1, unit: .quarters(.british)))
+        XCTAssertEqual(Measure(quantity: 2, unit: .stone), Measure(quantity: 28, unit: .pounds))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarters(.british)), Measure(quantity: 1, unit: .hundredweights(.british)))
+        XCTAssertEqual(Measure(quantity: 4, unit: .quarters(.british)), Measure(quantity: 112, unit: .pounds))
+        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweights(.british)), Measure(quantity: 1, unit: .tons(.british)))
+        XCTAssertEqual(Measure(quantity: 20, unit: .hundredweights(.british)), Measure(quantity: 2240, unit: .pounds))
     }
     
     func test_C7_apothecariesLiquidVolumeBritish() {
-        // Untested for the moment: To be added with British volume units
+        XCTAssertEqual(Measure(quantity: 8, unit: .pints(.british)), Measure(quantity: 1, unit: .gallons(.british)))
+        XCTAssertEqual(Measure(quantity: 8, unit: .pints(.british)), Measure(quantity: 160, unit: .fluidOunces(.british)))
     }
 
     // Pages C-8 to C-14 to be added (only underlined/exact relations, even if redundant given other tests in this file)
@@ -242,21 +243,21 @@ class NIST44Tests: XCTestCase {
     func test_C17_volume() {
         // Untested: 1 bushel = 2150.42 cubic inches
         XCTAssertEqual(Measure(quantity: 1, unit: .cords), Measure(quantity: 128, unit: .cubicFeet))
-        XCTAssertEqual(Measure(quantity: 1, unit: .cups), Measure(quantity: 8, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 1, unit: .cups), Measure(quantity: 0.5, unit: .pints))
+        XCTAssertEqual(Measure(quantity: 1, unit: .cups), Measure(quantity: 8, unit: .fluidOunces(.american)))
+        XCTAssertEqual(Measure(quantity: 1, unit: .cups), Measure(quantity: 0.5, unit: .pints(.american)))
     }
     
     func test_C18_volume() {
-        XCTAssertEqual(Measure(quantity: 1, unit: .fluidDrams), Measure(quantity: 0.125, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 1, unit: .gallons), Measure(quantity: 231, unit: .cubicInches))
-        XCTAssertEqual(Measure(quantity: 1, unit: .gallons), Measure(quantity: 128, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 1, unit: .gills), Measure(quantity: 4, unit: .fluidOunces))
-        XCTAssertEqual(Measure(quantity: 1, unit: .quarts), Measure(quantity: 57.75, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 1, unit: .fluidDrams(.american)), Measure(quantity: 0.125, unit: .fluidOunces(.american)))
+        XCTAssertEqual(Measure(quantity: 1, unit: .gallons(.american)), Measure(quantity: 231, unit: .cubicInches))
+        XCTAssertEqual(Measure(quantity: 1, unit: .gallons(.american)), Measure(quantity: 128, unit: .fluidOunces(.american)))
+        XCTAssertEqual(Measure(quantity: 1, unit: .gills(.american)), Measure(quantity: 4, unit: .fluidOunces(.american)))
+        XCTAssertEqual(Measure(quantity: 1, unit: .quarts(.american)), Measure(quantity: 57.75, unit: .cubicInches))
     }
     
     func test_C19_volume() {
         XCTAssertEqual(Measure(quantity: 1, unit: .tablespoons), Measure(quantity: 3, unit: .teaspoons))
-        XCTAssertEqual(Measure(quantity: 1, unit: .tablespoons), Measure(quantity: 0.5, unit: .fluidOunces))
+        XCTAssertEqual(Measure(quantity: 1, unit: .tablespoons), Measure(quantity: 0.5, unit: .fluidOunces(.american)))
         XCTAssertEqual(Measure(quantity: 1, unit: .teaspoons), Measure(quantity: 1/3, unit: .tablespoons))
     }
     
@@ -265,7 +266,7 @@ class NIST44Tests: XCTestCase {
         XCTAssertEqual(Measure(quantity: 1, unit: .dramsApothecaries), Measure(quantity: 60, unit: .grains))
         XCTAssertEqual(Measure(quantity: 1, unit: .grains), Measure(quantity: 64.798_91, unit: .milligrams))
         XCTAssertEqual(Measure(quantity: 1, unit: .longHundredweights), Measure(quantity: 112, unit: .pounds))
-        XCTAssertEqual(Measure(quantity: 1, unit: .hundredweightsUS), Measure(quantity: 100, unit: .pounds))
+        XCTAssertEqual(Measure(quantity: 1, unit: .hundredweights(.american)), Measure(quantity: 100, unit: .pounds))
         XCTAssertEqual(Measure(quantity: 1, unit: .ounces), Measure(quantity: 437.5, unit: .grains))
         XCTAssertEqual(Measure(quantity: 1, unit: .ouncesTroy), Measure(quantity: 480, unit: .grains))
         XCTAssertEqual(Measure(quantity: 1, unit: .ouncesApothecaries), Measure(quantity: 480, unit: .grains))
@@ -278,8 +279,8 @@ class NIST44Tests: XCTestCase {
         XCTAssertEqual(Measure(quantity: 1, unit: .poundsApothecaries), Measure(quantity: 5760, unit: .grains))
         XCTAssertEqual(Measure(quantity: 1, unit: .scruples), Measure(quantity: 20, unit: .grains))
         XCTAssertEqual(Measure(quantity: 1, unit: .longTons), Measure(quantity: 2240, unit: .pounds))
-        XCTAssertEqual(Measure(quantity: 1, unit: .longTons), Measure(quantity: 1.12, unit: .tonsUS))
-        XCTAssertEqual(Measure(quantity: 1, unit: .tonsUS), Measure(quantity: 2000, unit: .pounds))
+        XCTAssertEqual(Measure(quantity: 1, unit: .longTons), Measure(quantity: 1.12, unit: .tons(.american)))
+        XCTAssertEqual(Measure(quantity: 1, unit: .tons(.american)), Measure(quantity: 2000, unit: .pounds))
     }
     
 }
