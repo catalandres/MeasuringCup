@@ -25,6 +25,22 @@ public struct Measure: Comparable, Hashable, Summable {
         return self.quantity * factor / baseFactor
     }
     
+    // MARK: - Initializers
+    
+    public init(quantity: MeasureNumber, unit: Unit) {
+        switch quantity {
+        case is Int:
+            self.quantity = Double(quantity as! Int)
+        case is Float:
+            self.quantity = Double(quantity as! Float)
+        case is Double:
+            self.quantity = quantity as! Double
+        default:
+            self.quantity = 0
+        }
+        self.unit = unit
+    }
+    
     public func to(unit: Unit) -> Measure? {
         guard let factorFrom = self.unit.factor else {
             return nil
@@ -56,15 +72,25 @@ extension Measure: CustomStringConvertible {
 // MARK: - Comparable
 
 public func ==(lhs: Measure, rhs: Measure) -> Bool {
-    guard lhs.unit.type == rhs.unit.type else {
-        print("not the same type")
-        return false
+    if lhs.unit.type != rhs.unit.type {
+        switch (lhs.unit.type, rhs.unit.type) {
+        case (.volume, .dryVolume):
+            break
+        case (.volume, .liquidVolume):
+            break
+        case (.dryVolume, .volume):
+            break
+        case (.liquidVolume, .volume):
+            break
+        default:
+            return false
+        }
     }
     guard let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity else {
-        print("no base quantity")
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
     let epsilon = max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
+    print("\(abs(leftBase - rightBase)) --- \(epsilon)")
     return abs(leftBase - rightBase) <= epsilon
 }
 

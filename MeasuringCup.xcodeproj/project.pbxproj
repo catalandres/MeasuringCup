@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		414408F91CED772800898555 /* MeasureSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408F81CED772800898555 /* MeasureSystem.swift */; };
+		414408FB1CEE816200898555 /* MeasureNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408FA1CEE816200898555 /* MeasureNumber.swift */; };
 		41B37EF91CE6C58200F6E5EF /* MeasuringCup.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41B37F001CE6C58200F6E5EF /* MeasuringCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */; };
 		41B37F101CE6C67C00F6E5EF /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F0F1CE6C67C00F6E5EF /* Measure.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		414408F81CED772800898555 /* MeasureSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureSystem.swift; sourceTree = "<group>"; };
+		414408FA1CEE816200898555 /* MeasureNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeasureNumber.swift; path = MeasuringCup/MeasureNumber.swift; sourceTree = SOURCE_ROOT; };
 		41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeasuringCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuringCup.h; sourceTree = "<group>"; };
 		41B37EFA1CE6C58200F6E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				414408F81CED772800898555 /* MeasureSystem.swift */,
 				41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */,
 				41B37F0F1CE6C67C00F6E5EF /* Measure.swift */,
+				414408FA1CEE816200898555 /* MeasureNumber.swift */,
 				41B37F181CE82FDA00F6E5EF /* Properties */,
 				41B37F171CE82F6F00F6E5EF /* Units */,
 				41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */,
@@ -233,6 +236,7 @@
 			files = (
 				41B37F211CE84D2D00F6E5EF /* Scalable.swift in Sources */,
 				414408F91CED772800898555 /* MeasureSystem.swift in Sources */,
+				414408FB1CEE816200898555 /* MeasureNumber.swift in Sources */,
 				41B37F2B1CE8B5C100F6E5EF /* UnitType.swift in Sources */,
 				41B37F161CE79ED300F6E5EF /* Unit.swift in Sources */,
 				41B37F101CE6C67C00F6E5EF /* Measure.swift in Sources */,
