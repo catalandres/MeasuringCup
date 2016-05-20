@@ -262,7 +262,7 @@ class NIST44Tests: XCTestCase {
         XCTAssertEqual(1.squareYards, 9.squareFeet)
         XCTAssertEqual(1.squareYards, 8361.273_6.squareCentimeters)
         XCTAssertEqual(1.squareYards, 0.836_127_36.squareMeters)
-        XCTAssertEqual(1.squareMiles, 4_014_489_600.squareInches)
+        XCTAssertEqual(1.squareMiles, 4_014_489_600.0.squareInches)
         XCTAssertEqual(1.squareMiles, 27_878_400.squareFeet)
         XCTAssertEqual(1.squareMiles, 3_097_600.squareYards)
         XCTAssertEqual(1.squareMiles, 25_899_881_103.36.squareCentimeters)
