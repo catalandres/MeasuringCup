@@ -8,24 +8,26 @@
 
 import Foundation
 
-public enum Unit {
+public enum Unit: Equatable {
 
     //Length - SI
     case yoctometers, zeptometers, attometers, femtometers, picometers, nanometers, micrometers, millimeters, centimeters, decimeters, meters, decameters, hectometers, kilometers, megameters, gigameters, terameters, petameters, exameters, zettameters, yottameters
     case fermis, ångströms, microns
-    case inches, feet, yards, miles, leagues, rods, furlongs, links, chains
+    case thou, mils, inches, feet, yards, miles, leagues
+    case surveyLinks, surveyFeet, surveyRods, surveyChains, surveyMiles, surveyFurlongs
     case fathoms, nauticalMiles
     
     //Mass
     case yoctograms, zeptograms, attograms, femtograms, picograms, nanograms, micrograms, milligrams, centigrams, decigrams, grams, decagrams, hectograms, kilograms, megagrams, gigagrams, teragrams, petagrams, exagrams, zettagrams, yottagrams
     case metricTons
-    case carats, grains, drams, ounces, pounds, quartersUS, quartersUK, hundredweightsUS, hundredweightsUK, longHundredweights, tonsUS, tonsUK, longTons, stones
+    case carats, grains, drams, ounces, pounds, quarters(MeasureSystem), hundredweights(MeasureSystem), longHundredweights, tons(MeasureSystem), longTons, stone
     case pennyweights, ouncesTroy, poundsTroy
     case scruples, dramsApothecaries, ouncesApothecaries, poundsApothecaries
     
     //Area
     case squareYoctometers, squareZeptometers, squareAttometers, squareFemtometers, squarePicometers, squareNanometers, squareMicrometers, squareMillimeters, squareCentimeters, squareDecimeters, squareMeters, squareDecameters, squareHectometers, squareKilometers, squareMegameters, squareGigameters, squareTerameters, squarePetameters, squareExameters, squareZettameters, squareYottameters
     case centiares, deciares, ares, decares, hectares
+    case squareSurveyFeet, squareSurveyRods, squareSurveyChains, squareSurveyMiles
     case acres
     case squareInches, squareFeet, squareYards, squareMiles, squareRods
     
@@ -33,8 +35,8 @@ public enum Unit {
     case cubicYoctometers, cubicZeptometers, cubicAttometers, cubicFemtometers, cubicPicometers, cubicNanometers, cubicMicrometers, cubicMillimeters, cubicCentimeters, cubicDecimeters, cubicMeters, cubicDecameters, cubicHectometers, cubicKilometers, cubicMegameters, cubicGigameters, cubicTerameters, cubicPetameters, cubicExameters, cubicZettameters, cubicYottameters
     case yoctoliters, zeptoliters, attoliters, femtoliters, picoliters, nanoliters, microliters, milliliters, centiliters, deciliters, liters, decaliters, hectoliters, kiloliters, megaliters, gigaliters, teraliters, petaliters, exaliters, zettaliters, yottaliters
     case cubicInches, cubicFeet, cubicYards, cubicMiles
-    case minims, fluidScruples, teaspoons, tablespoons, cups, fluidOunces, fluidDrams, gills, pints, quarts, gallons, cords, pecks, bushels
-    
+    case minims(MeasureSystem), fluidScruples(MeasureSystem), teaspoons, tablespoons, cups, fluidOunces(MeasureSystem), fluidDrams(MeasureSystem), fluidDrachms(MeasureSystem), gills(MeasureSystem), pints(MeasureSystem), quarts(MeasureSystem), gallons(MeasureSystem), cords, pecks(MeasureSystem), bushels(MeasureSystem)
+    case dryQuarts, dryPints
     public var type: UnitType {
         return Unit.values(self).type
     }
@@ -107,6 +109,8 @@ public enum Unit {
         case .microns:
             return (.length, pow(10, -6), "μm")
             
+        case .thou, .mils:
+            return (.length, ft👉🏻m / 12 / 1000, "thou")
         case .inches:
             return (.length, ft👉🏻m / 12, "in")
         case .feet:
@@ -117,14 +121,19 @@ public enum Unit {
             return (.length, ft👉🏻m * 5_280, "mi")
         case .leagues:
             return (.length, ft👉🏻m * 5_280 * 3, "lg")
-        case .rods:
-            return (.length, ft👉🏻m * 16.5, "rd")
-        case .furlongs:
-            return (.length, ft👉🏻m * 16.5 * 40, "fur")
-        case .links:
-            return (.length, ft👉🏻m * 0.66, "li")
-        case .chains:
-            return (.length, ft👉🏻m * 0.66 * 100, "ch")
+    
+        case .surveyLinks:
+            return (.length, ft👉🏻m * 5_280 / 0.999_998 / 8_000, "li")
+        case .surveyFeet:
+            return (.length, ft👉🏻m / 0.999_998, "ft")
+        case .surveyRods:
+            return (.length, ft👉🏻m * 5_280 / 0.999_998 / 320, "rd")
+        case .surveyChains:
+            return (.length, ft👉🏻m * 5_280 / 0.999_998 / 80, "ch")
+        case .surveyFurlongs:
+            return (.length, ft👉🏻m / 0.999_998 * 660, "fur")
+        case .surveyMiles:
+            return (.length, ft👉🏻m * 5_280 / 0.999_998, "mi")
             
         case .fathoms:
             return (.length, ft👉🏻m * 6, "fath")
@@ -188,20 +197,34 @@ public enum Unit {
             return (.mass, lb👉🏻g / 16, "oz")
         case .pounds:
             return (.mass, lb👉🏻g, "lb")
-        case .stones:
+        case .stone:
             return (.mass, lb👉🏻g * 14, "qr")
-        case .quartersUS:
-            return (.mass, lb👉🏻g * 25, "qr")
-        case .quartersUK:
-            return (.mass, lb👉🏻g * 28, "qr")
-        case .hundredweightsUS:
-            return (.mass, lb👉🏻g * 100, "cwt")
-        case .longHundredweights, .hundredweightsUK:
+        case .quarters(let system):
+            switch system {
+            case .british:
+                return (.mass, lb👉🏻g * 28, "qr")
+            case .american:
+                return (.mass, lb👉🏻g * 25, "qr")
+            }
+        case .hundredweights(let system):
+            switch system {
+            case .british:
+                return (.mass, lb👉🏻g * 112, "cwt")
+            case .american:
+                return (.mass, lb👉🏻g * 100, "cwt")
+            }
+        case .longHundredweights:
             return (.mass, lb👉🏻g * 112, "cwt")
-        case .tonsUS:
-            return (.mass, lb👉🏻g * 2000, "tn")
-        case .longTons, .tonsUK:
+        case .tons(let system):
+            switch system {
+            case .british:
+                return (.mass, lb👉🏻g * 2240, "tn")
+            case .american:
+                return (.mass, lb👉🏻g * 2000, "tn")
+            }
+        case .longTons:
             return (.mass, lb👉🏻g * 2240, "tn")
+            
             
         case .pennyweights:
             return (.mass, lb👉🏻g / 7000 * 24, "dwt")
@@ -276,7 +299,7 @@ public enum Unit {
             return (.area, pow(10, 4), "ha")
             
         case .acres:
-            return (.area, pow(ft👉🏻m * 5280, 2) / 640, "ac")
+            return (.area, pow(ft👉🏻m / 0.999_998 * 5280, 2) / 640, "ac")
             
         case .squareInches:
             return (.area, pow(ft👉🏻m / 12, 2), "in²")
@@ -288,6 +311,15 @@ public enum Unit {
             return (.area, pow(ft👉🏻m * 5280, 2), "mi²")
         case .squareRods:
             return (.area, pow(ft👉🏻m * 16.5, 2), "rd²")
+            
+        case .squareSurveyFeet:
+            return (.area, pow(ft👉🏻m / 0.999_998, 2), "ft²")
+        case .squareSurveyRods:
+            return (.area, pow(ft👉🏻m / 0.999_998 * 16.5, 2), "rd²")
+        case .squareSurveyChains:
+            return (.area, pow(ft👉🏻m * 5_280 / 0.999_998 / 80, 2), "ch²")
+        case .squareSurveyMiles:
+            return (.area, pow(ft👉🏻m / 0.999_998 * 5280, 2), "mi²")
             
         // MARK: - Volume
         case .cubicYoctometers:
@@ -385,29 +417,93 @@ public enum Unit {
         case .cubicMiles:
             return (.volume, pow(ft👉🏻m * 5280, 3), "mi³")
             
-        case .minims:
-            return (.volume, gal👉🏻m³ / 1024 / 60, "min")
-        case .fluidScruples:
-            return (.volume, gal👉🏻m³ / 1024 / 60 * 20, "min")
-        case .fluidDrams:
-            return (.volume, gal👉🏻m³ / 1024, "fl dr")
-        case .fluidOunces:
-            return (.volume, gal👉🏻m³ / 128, "fl oz")
-        case .gills:
-            return (.volume, gal👉🏻m³ / 32, "gi")
-        case .pints:
-            return (.volume, gal👉🏻m³ / 8, "pt")
-        case .quarts:
-            return (.volume, gal👉🏻m³ / 4, "qt")
-        case .gallons:
-            return (.volume, gal👉🏻m³, "gal")
-        case .cords:
-            return (.volume, 128 * pow(ft👉🏻m, 3), "cd")
-        case .pecks:
-            return (.volume, 2 * gal👉🏻m³, "pk")
-        case .bushels:
-            return (.volume, 8 * gal👉🏻m³, "bu")
+        // MARK: Liquid volume
+        case .minims(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 160 / 8 / 60, "min")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 1024 / 60, "min")
+            }
+        case .fluidScruples(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 160 / 8 / 60 * 20, "min")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 1024 / 60 * 20, "min")
+            }
+        case .fluidDrams(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 160 / 8, "fl dr")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 1024, "fl dr")
+            }
+        case .fluidDrachms(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 160 / 8, "fl dr")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 1024, "fl dr")
+            }
+        case .fluidOunces(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 160, "gi")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 128, "fl oz")
+            }
+        case .gills(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 32, "gi")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 32, "gi")
+            }
+        case .pints(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 8, "pt")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 8, "pt")
+            }
+        case .quarts(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09 / 4, "qt")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³ / 4, "qt")
+            }
+        case .gallons(let system):
+            switch system {
+            case .british:
+                return (.volume, l👉🏻m³ * 4.546_09, "gal")
+            case .american:
+                return (.liquidVolume, gal👉🏻m³, "gal")
+            }
             
+        // MARK: Dry volume
+        case .cords:
+            return (.dryVolume, 128 * pow(ft👉🏻m, 3), "cd")
+        case .pecks(let system):
+            switch system {
+            case .british:
+                return (.volume, 2 * l👉🏻m³ * 4.546_09, "pk")
+            case .american:
+                return (.dryVolume, 35.239_070_166_88 * l👉🏻m³ / 4, "pk")
+            }
+        case .bushels(let system):
+            switch system {
+            case .british:
+                return (.volume, 8 * l👉🏻m³ * 4.546_09, "bu")
+            case .american:
+                return (.dryVolume, 35.239_070_166_88 * l👉🏻m³, "bu")
+            }
+        case .dryPints:
+            return (.dryVolume, 35.239_070_166_88 * l👉🏻m³ / 64, "pt")
+        case .dryQuarts:
+            return (.dryVolume, 35.239_070_166_88 * l👉🏻m³ / 32, "pt")
+        // MARK: Kitchen volume
         case .teaspoons:
             return (.volume, gal👉🏻m³ / 768, "tsp")
         case .tablespoons:
@@ -419,5 +515,9 @@ public enum Unit {
 }
 
 public func ==(lhs: Unit, rhs: Unit) -> Bool {
-    return lhs.symbol == rhs.symbol
+    return lhs.symbol == rhs.symbol && lhs.factor == rhs.factor
+}
+
+public func !=(lhs: Unit, rhs: Unit) -> Bool {
+    return !(lhs.symbol == rhs.symbol && lhs.factor == rhs.factor)
 }
