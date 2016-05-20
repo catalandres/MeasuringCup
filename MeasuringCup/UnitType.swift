@@ -13,6 +13,8 @@ public enum UnitType {
     case mass
     case area
     case volume
+    case dryVolume
+    case liquidVolume
     
     public var baseUnit: Unit? {
         switch self {
@@ -23,6 +25,10 @@ public enum UnitType {
         case .area:
             return .squareMeters
         case .volume:
+            return .liters
+        case .dryVolume:
+            return .liters
+        case .liquidVolume:
             return .liters
         }
     }
