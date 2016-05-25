@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4106650C1CF51285000815AA /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106650B1CF51285000815AA /* TemperatureTests.swift */; };
 		414408F91CED772800898555 /* MeasureSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408F81CED772800898555 /* MeasureSystem.swift */; };
 		414408FB1CEE816200898555 /* MeasureNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408FA1CEE816200898555 /* MeasureNumber.swift */; };
 		41B37EF91CE6C58200F6E5EF /* MeasuringCup.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4106650B1CF51285000815AA /* TemperatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		414408F81CED772800898555 /* MeasureSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureSystem.swift; sourceTree = "<group>"; };
 		414408FA1CEE816200898555 /* MeasureNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeasureNumber.swift; path = MeasuringCup/MeasureNumber.swift; sourceTree = SOURCE_ROOT; };
 		41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeasuringCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,9 +89,9 @@
 		41B37EF71CE6C58200F6E5EF /* MeasuringCup */ = {
 			isa = PBXGroup;
 			children = (
+				41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */,
 				41B37F151CE79ED300F6E5EF /* Unit.swift */,
 				414408F81CED772800898555 /* MeasureSystem.swift */,
-				41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */,
 				41B37F0F1CE6C67C00F6E5EF /* Measure.swift */,
 				414408FA1CEE816200898555 /* MeasureNumber.swift */,
 				41B37F181CE82FDA00F6E5EF /* Properties */,
@@ -106,6 +108,7 @@
 				41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */,
 				41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */,
 				41B37F061CE6C58300F6E5EF /* Info.plist */,
+				4106650B1CF51285000815AA /* TemperatureTests.swift */,
 			);
 			path = MeasuringCupTests;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4106650C1CF51285000815AA /* TemperatureTests.swift in Sources */,
 				41B37F141CE6D95A00F6E5EF /* MeasureTests.swift in Sources */,
 				41B37F2D1CEA24B200F6E5EF /* NIST44Tests.swift in Sources */,
 			);
