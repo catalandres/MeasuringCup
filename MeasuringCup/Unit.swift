@@ -47,6 +47,8 @@ public enum Unit: Equatable {
     case kibibytes, mebibytes, gibibytes, tebibytes, pebibytes, exbibytes, zebibytes, yobibytes
     case kibibits, mebibits, gibibits, tebibits, pebibits, exbibits, zebibits, yobibits
     
+    // Time
+    case nanoseconds, microseconds, milliseconds, seconds, minutes, hours, days, weeks
     
     public var type: UnitType {
         return Unit.values(self).type
@@ -530,74 +532,90 @@ public enum Unit: Equatable {
             return (.temperature, -273.15, 1, "K")
         case .fahrenheit:
             return (.temperature, -32, 5.0 / 9, "K")
-        case bytes:
+        case .bytes:
             return (.information, 0, pow(10, 0), "B")
-        case kilobytes:
+        case .kilobytes:
             return (.information, 0, pow(10, 3), "kB")
-        case megabytes:
+        case .megabytes:
             return (.information, 0, pow(10, 6), "MB")
-        case gigabytes:
+        case .gigabytes:
             return (.information, 0, pow(10, 9), "GB")
-        case terabytes:
+        case .terabytes:
             return (.information, 0, pow(10, 12), "TB")
-        case petabytes:
+        case .petabytes:
             return (.information, 0, pow(10, 15), "PB")
-        case exabytes:
+        case .exabytes:
             return (.information, 0, pow(10, 18), "EB")
-        case zettabytes:
+        case .zettabytes:
             return (.information, 0, pow(10, 21), "ZB")
-        case yottabytes:
+        case .yottabytes:
             return (.information, 0, pow(10, 24), "YB")
-        case bits:
+        case .bits:
             return (.information, 0, pow(10, 0) / 8, "b")
-        case kilobits:
+        case .kilobits:
             return (.information, 0, pow(10, 3) / 8, "kb")
-        case megabits:
+        case .megabits:
             return (.information, 0, pow(10, 6) / 8, "Mb")
-        case gigabits:
+        case .gigabits:
             return (.information, 0, pow(10, 9) / 8, "Gb")
-        case terabits:
+        case .terabits:
             return (.information, 0, pow(10, 12) / 8, "Tb")
-        case petabits:
+        case .petabits:
             return (.information, 0, pow(10, 15) / 8, "Pb")
-        case exabits:
+        case .exabits:
             return (.information, 0, pow(10, 18) / 8, "Eb")
-        case zettabits:
+        case .zettabits:
             return (.information, 0, pow(10, 21) / 8, "Zb")
-        case yottabits:
+        case .yottabits:
             return (.information, 0, pow(10, 24) / 8, "Yb")
-        case kibibytes:
+        case .kibibytes:
             return (.information, 0, pow(2, 10), "kiB")
-        case mebibytes:
+        case .mebibytes:
             return (.information, 0, pow(2, 20), "MiB")
-        case gibibytes:
+        case .gibibytes:
             return (.information, 0, pow(2, 30), "GiB")
-        case tebibytes:
+        case .tebibytes:
             return (.information, 0, pow(2, 40), "TiB")
-        case pebibytes:
+        case .pebibytes:
             return (.information, 0, pow(2, 50), "PiB")
-        case exbibytes:
+        case .exbibytes:
             return (.information, 0, pow(2, 60), "EiB")
-        case zebibytes:
+        case .zebibytes:
             return (.information, 0, pow(2, 70), "ZiB")
-        case yobibytes:
+        case .yobibytes:
             return (.information, 0, pow(2, 80), "YiB")
-        case kibibits:
+        case .kibibits:
             return (.information, 0, pow(2, 10) / 8, "kib")
-        case mebibits:
+        case .mebibits:
             return (.information, 0, pow(2, 20) / 8, "Mib")
-        case gibibits:
+        case .gibibits:
             return (.information, 0, pow(2, 30) / 8, "Gib")
-        case tebibits:
+        case .tebibits:
             return (.information, 0, pow(2, 40) / 8, "Tib")
-        case pebibits:
+        case .pebibits:
             return (.information, 0, pow(2, 50) / 8, "Pib")
-        case exbibits:
+        case .exbibits:
             return (.information, 0, pow(2, 60) / 8, "Eib")
-        case zebibits:
+        case .zebibits:
             return (.information, 0, pow(2, 70) / 8, "Zib")
-        case yobibits:
+        case .yobibits:
             return (.information, 0, pow(2, 80) / 8, "Yib")
+        case .nanoseconds:
+            return (.time, 0, pow(10, -9), "ns")
+        case .microseconds:
+            return (.time, 0, pow(10, -6), "μs")
+        case .milliseconds:
+            return (.time, 0, pow(10, -3), "ms")
+        case .seconds:
+            return (.time, 0, pow(10, 0), "s")
+        case .minutes:
+            return (.time, 0, 60, "min")
+        case .hours:
+            return (.time, 0, 60 * 60, "h")
+        case .days:
+            return (.time, 0, 60 * 60 * 24, "d")
+        case .weeks:
+            return (.time, 0, 60 * 60 * 24 * 7, "wk")
         }
     }
 }

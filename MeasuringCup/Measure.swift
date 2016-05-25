@@ -44,6 +44,11 @@ public struct Measure: Comparable, Hashable, Summable {
         self.unit = unit
     }
     
+    public init(timeInterval: NSTimeInterval) {
+        self.quantity = timeInterval as Double
+        self.unit = .seconds
+    }
+    
     public func to(unit: Unit) -> Measure? {
         guard let factorFrom = self.unit.factor else {
             return nil
@@ -92,7 +97,6 @@ public func ==(lhs: Measure, rhs: Measure) -> Bool {
     guard let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity else {
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
-    print("\(leftBase) vs \(rightBase)")
     let epsilon = max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
     return abs(leftBase - rightBase) <= epsilon
 }

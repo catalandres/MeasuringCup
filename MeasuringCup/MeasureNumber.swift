@@ -667,4 +667,28 @@ extension MeasureNumber {
     var yobibits: Measure {
         return Measure(quantity: self, unit: .yobibits)
     }
+    var nanoseconds: Measure {
+        return Measure(quantity: self, unit: .nanoseconds)
+    }
+    var microseconds: Measure {
+        return Measure(quantity: self, unit: .microseconds)
+    }
+    var milliseconds: Measure {
+        return Measure(quantity: self, unit: .milliseconds)
+    }
+    var seconds: Measure {
+        return Measure(quantity: self, unit: .seconds)
+    }
+    var minutes: Measure {
+        return Measure(quantity: self, unit: .minutes)
+    }
+    var hours: Measure {
+        return Measure(quantity: self, unit: .hours)
+    }
+    var days: Measure {
+        return Measure(quantity: self, unit: .days)
+    }
+    var weeks: Measure {
+        return Measure(quantity: self, unit: .weeks)
+    }
 }
