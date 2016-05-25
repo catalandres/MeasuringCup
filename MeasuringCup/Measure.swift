@@ -97,6 +97,7 @@ public func ==(lhs: Measure, rhs: Measure) -> Bool {
     guard let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity else {
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
+    print("\(leftBase) vs \(rightBase)")
     let epsilon = max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
     return abs(leftBase - rightBase) <= epsilon
 }
