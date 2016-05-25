@@ -16,6 +16,7 @@ public enum UnitType {
     case dryVolume
     case liquidVolume
     case temperature
+    case information
     
     public var baseUnit: Unit? {
         switch self {
@@ -33,6 +34,8 @@ public enum UnitType {
             return .liters
         case .temperature:
             return .celsius
+        case .information:
+            return .bytes
         }
     }
 }

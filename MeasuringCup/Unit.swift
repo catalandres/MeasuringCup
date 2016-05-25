@@ -41,6 +41,13 @@ public enum Unit: Equatable {
     // Temperature
     case celsius, kelvin, fahrenheit
     
+    // Information
+    case bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, exabytes, zettabytes, yottabytes
+    case bits, kilobits, megabits, gigabits, terabits, petabits, exabits, zettabits, yottabits
+    case kibibytes, mebibytes, gibibytes, tebibytes, pebibytes, exbibytes, zebibytes, yobibytes
+    case kibibits, mebibits, gibibits, tebibits, pebibits, exbibits, zebibits, yobibits
+    
+    
     public var type: UnitType {
         return Unit.values(self).type
     }
@@ -523,6 +530,74 @@ public enum Unit: Equatable {
             return (.temperature, -273.15, 1, "K")
         case .fahrenheit:
             return (.temperature, -32, 5.0 / 9, "K")
+        case bytes:
+            return (.information, 0, pow(10, 0), "B")
+        case kilobytes:
+            return (.information, 0, pow(10, 3), "kB")
+        case megabytes:
+            return (.information, 0, pow(10, 6), "MB")
+        case gigabytes:
+            return (.information, 0, pow(10, 9), "GB")
+        case terabytes:
+            return (.information, 0, pow(10, 12), "TB")
+        case petabytes:
+            return (.information, 0, pow(10, 15), "PB")
+        case exabytes:
+            return (.information, 0, pow(10, 18), "EB")
+        case zettabytes:
+            return (.information, 0, pow(10, 21), "ZB")
+        case yottabytes:
+            return (.information, 0, pow(10, 24), "YB")
+        case bits:
+            return (.information, 0, pow(10, 0) / 8, "b")
+        case kilobits:
+            return (.information, 0, pow(10, 3) / 8, "kb")
+        case megabits:
+            return (.information, 0, pow(10, 6) / 8, "Mb")
+        case gigabits:
+            return (.information, 0, pow(10, 9) / 8, "Gb")
+        case terabits:
+            return (.information, 0, pow(10, 12) / 8, "Tb")
+        case petabits:
+            return (.information, 0, pow(10, 15) / 8, "Pb")
+        case exabits:
+            return (.information, 0, pow(10, 18) / 8, "Eb")
+        case zettabits:
+            return (.information, 0, pow(10, 21) / 8, "Zb")
+        case yottabits:
+            return (.information, 0, pow(10, 24) / 8, "Yb")
+        case kibibytes:
+            return (.information, 0, pow(2, 10), "kiB")
+        case mebibytes:
+            return (.information, 0, pow(2, 20), "MiB")
+        case gibibytes:
+            return (.information, 0, pow(2, 30), "GiB")
+        case tebibytes:
+            return (.information, 0, pow(2, 40), "TiB")
+        case pebibytes:
+            return (.information, 0, pow(2, 50), "PiB")
+        case exbibytes:
+            return (.information, 0, pow(2, 60), "EiB")
+        case zebibytes:
+            return (.information, 0, pow(2, 70), "ZiB")
+        case yobibytes:
+            return (.information, 0, pow(2, 80), "YiB")
+        case kibibits:
+            return (.information, 0, pow(2, 10) / 8, "kib")
+        case mebibits:
+            return (.information, 0, pow(2, 20) / 8, "Mib")
+        case gibibits:
+            return (.information, 0, pow(2, 30) / 8, "Gib")
+        case tebibits:
+            return (.information, 0, pow(2, 40) / 8, "Tib")
+        case pebibits:
+            return (.information, 0, pow(2, 50) / 8, "Pib")
+        case exbibits:
+            return (.information, 0, pow(2, 60) / 8, "Eib")
+        case zebibits:
+            return (.information, 0, pow(2, 70) / 8, "Zib")
+        case yobibits:
+            return (.information, 0, pow(2, 80) / 8, "Yib")
         }
     }
 }

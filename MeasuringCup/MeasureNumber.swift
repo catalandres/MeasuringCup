@@ -565,5 +565,106 @@ extension MeasureNumber {
     var kelvin: Measure {
         return Measure(quantity: self, unit: .kelvin)
     }
-
+    var bytes: Measure {
+        return Measure(quantity: self, unit: .bytes)
+    }
+    var kilobytes: Measure {
+        return Measure(quantity: self, unit: .kilobytes)
+    }
+    var megabytes: Measure {
+        return Measure(quantity: self, unit: .megabytes)
+    }
+    var gigabytes: Measure {
+        return Measure(quantity: self, unit: .gigabytes)
+    }
+    var terabytes: Measure {
+        return Measure(quantity: self, unit: .terabytes)
+    }
+    var petabytes: Measure {
+        return Measure(quantity: self, unit: .petabytes)
+    }
+    var exabytes: Measure {
+        return Measure(quantity: self, unit: .exabytes)
+    }
+    var zettabytes: Measure {
+        return Measure(quantity: self, unit: .zettabytes)
+    }
+    var yottabytes: Measure {
+        return Measure(quantity: self, unit: .yottabytes)
+    }
+    var bits: Measure {
+        return Measure(quantity: self, unit: .bits)
+    }
+    var kilobits: Measure {
+        return Measure(quantity: self, unit: .kilobits)
+    }
+    var megabits: Measure {
+        return Measure(quantity: self, unit: .megabits)
+    }
+    var gigabits: Measure {
+        return Measure(quantity: self, unit: .gigabits)
+    }
+    var terabits: Measure {
+        return Measure(quantity: self, unit: .terabits)
+    }
+    var petabits: Measure {
+        return Measure(quantity: self, unit: .petabits)
+    }
+    var exabits: Measure {
+        return Measure(quantity: self, unit: .exabits)
+    }
+    var zettabits: Measure {
+        return Measure(quantity: self, unit: .zettabits)
+    }
+    var yottabits: Measure {
+        return Measure(quantity: self, unit: .yottabits)
+    }
+    var kibibytes: Measure {
+        return Measure(quantity: self, unit: .kibibytes)
+    }
+    var mebibytes: Measure {
+        return Measure(quantity: self, unit: .mebibytes)
+    }
+    var gibibytes: Measure {
+        return Measure(quantity: self, unit: .gibibytes)
+    }
+    var tebibytes: Measure {
+        return Measure(quantity: self, unit: .tebibytes)
+    }
+    var pebibytes: Measure {
+        return Measure(quantity: self, unit: .pebibytes)
+    }
+    var exbibytes: Measure {
+        return Measure(quantity: self, unit: .exbibytes)
+    }
+    var zebibytes: Measure {
+        return Measure(quantity: self, unit: .zebibytes)
+    }
+    var yobibytes: Measure {
+        return Measure(quantity: self, unit: .yobibytes)
+    }
+    var kibibits: Measure {
+        return Measure(quantity: self, unit: .kibibits)
+    }
+    var mebibits: Measure {
+        return Measure(quantity: self, unit: .mebibits)
+    }
+    var gibibits: Measure {
+        return Measure(quantity: self, unit: .gibibits)
+    }
+    var tebibits: Measure {
+        return Measure(quantity: self, unit: .tebibits)
+    }
+    var pebibits: Measure {
+        return Measure(quantity: self, unit: .pebibits)
+    }
+    var exbibits: Measure {
+        return Measure(quantity: self, unit: .exbibits)
+    }
+    var zebibits: Measure {
+        return Measure(quantity: self, unit: .zebibits)
+    }
+    var yobibits: Measure {
+        return Measure(quantity: self, unit: .yobibits)
+    }
 }
