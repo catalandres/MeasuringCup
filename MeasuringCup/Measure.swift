@@ -16,13 +16,16 @@ public struct Measure: Comparable, Hashable, Summable {
     let unit: Unit
 
     public var baseQuantity: Double? {
+        guard let shift = self.unit.shift else {
+            return nil
+        }
         guard let factor = self.unit.factor else {
             return nil
         }
         guard let baseFactor = self.unit.type.baseUnit?.factor else {
             return nil
         }
-        return self.quantity * factor / baseFactor
+        return (self.quantity + shift) * factor / baseFactor
     }
     
     // MARK: - Initializers
@@ -89,6 +92,7 @@ public func ==(lhs: Measure, rhs: Measure) -> Bool {
     guard let leftBase = lhs.baseQuantity, rightBase = rhs.baseQuantity else {
         return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
     }
+    print("\(leftBase) vs \(rightBase)")
     let epsilon = max(Measure.absoluteTolerance, Measure.relativeTolerance * max(abs(leftBase), abs(rightBase)))
     return abs(leftBase - rightBase) <= epsilon
 }

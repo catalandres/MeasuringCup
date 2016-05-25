@@ -556,5 +556,14 @@ extension MeasureNumber {
     func bushels(system: MeasureSystem) -> Measure {
         return Measure(quantity: self, unit: .bushels(system))
     }
+    var celsius: Measure {
+        return Measure(quantity: self, unit: .celsius)
+    }
+    var fahrenheit: Measure {
+        return Measure(quantity: self, unit: .fahrenheit)
+    }
+    var kelvin: Measure {
+        return Measure(quantity: self, unit: .kelvin)
+    }
 
 }
