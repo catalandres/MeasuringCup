@@ -25,7 +25,7 @@ class TimeTests: XCTestCase {
         let start = NSDate()
         let end = start.dateByAddingTimeInterval(100)
         let interval = end.timeIntervalSinceDate(start)
-        let it = Measure(timeInterval: interval)
+        let it = Time(timeInterval: interval)
         XCTAssertEqual(it, 100.seconds)
     }
     
