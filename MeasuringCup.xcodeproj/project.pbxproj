@@ -7,16 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		414408F91CED772800898555 /* MeasureSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408F81CED772800898555 /* MeasureSystem.swift */; };
+		4101F6951CF6B7F600EEB7D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6941CF6B7F600EEB7D4 /* Constants.swift */; };
+		4101F6C01CF6E9B900EEB7D4 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B01CF6E9B900EEB7D4 /* Length.swift */; };
+		4101F6C11CF6E9B900EEB7D4 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B11CF6E9B900EEB7D4 /* Area.swift */; };
+		4101F6C21CF6E9B900EEB7D4 /* MeasureBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */; };
+		4101F6C31CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B41CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift */; };
+		4101F6C41CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B51CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift */; };
+		4101F6C51CF6E9B900EEB7D4 /* ConvertibleMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B61CF6E9B900EEB7D4 /* ConvertibleMeasure.swift */; };
+		4101F6C61CF6E9B900EEB7D4 /* Measure+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B71CF6E9B900EEB7D4 /* Measure+Comparable.swift */; };
+		4101F6C71CF6E9B900EEB7D4 /* Measure+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B81CF6E9B900EEB7D4 /* Measure+CustomStringConvertible.swift */; };
+		4101F6C81CF6E9B900EEB7D4 /* Measure+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B91CF6E9B900EEB7D4 /* Measure+Hashable.swift */; };
+		4101F6C91CF6E9B900EEB7D4 /* Measure+ScalarProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6BA1CF6E9B900EEB7D4 /* Measure+ScalarProducts.swift */; };
+		4101F6CA1CF6E9B900EEB7D4 /* Measure+Sums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6BB1CF6E9B900EEB7D4 /* Measure+Sums.swift */; };
+		4101F6CB1CF6E9B900EEB7D4 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6BC1CF6E9B900EEB7D4 /* Measure.swift */; };
+		4101F6CE1CF6E9B900EEB7D4 /* Volume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6BF1CF6E9B900EEB7D4 /* Volume.swift */; };
+		4101F6DC1CF6E9E200EEB7D4 /* ConvertibleUnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6D11CF6E9E200EEB7D4 /* ConvertibleUnitType.swift */; };
+		4101F6E01CF6E9E200EEB7D4 /* UnitType+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6D61CF6E9E200EEB7D4 /* UnitType+Hashable.swift */; };
+		4101F6E11CF6E9E200EEB7D4 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6D71CF6E9E200EEB7D4 /* UnitType.swift */; };
+		4101F6E61CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6E51CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift */; };
+		4101F6E81CF744EB00EEB7D4 /* ConvertibleUnitType+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6E71CF744EB00EEB7D4 /* ConvertibleUnitType+Hashable.swift */; };
+		4101F6EA1CF7720700EEB7D4 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6E91CF7720700EEB7D4 /* Mass.swift */; };
+		4101F6EC1CF7728F00EEB7D4 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6EB1CF7728F00EEB7D4 /* Information.swift */; };
+		4101F6EE1CF772F400EEB7D4 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6ED1CF772F400EEB7D4 /* Temperature.swift */; };
+		4101F6F01CF7736A00EEB7D4 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6EF1CF7736A00EEB7D4 /* Time.swift */; };
+		4101F6F21CF7742300EEB7D4 /* MeasureNumber+Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6F11CF7742300EEB7D4 /* MeasureNumber+Length.swift */; };
+		4101F6F41CF7746F00EEB7D4 /* MeasureNumber+Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6F31CF7746F00EEB7D4 /* MeasureNumber+Mass.swift */; };
+		4101F6F61CF7757800EEB7D4 /* MeasureNumber+Volume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6F51CF7757800EEB7D4 /* MeasureNumber+Volume.swift */; };
+		4101F6F81CF7762700EEB7D4 /* MeasureNumber+Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6F71CF7762700EEB7D4 /* MeasureNumber+Area.swift */; };
+		4101F6FA1CF7769000EEB7D4 /* MeasureNumber+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6F91CF7769000EEB7D4 /* MeasureNumber+Time.swift */; };
+		4101F6FC1CF7772400EEB7D4 /* MeasureNumber+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6FB1CF7772400EEB7D4 /* MeasureNumber+Temperature.swift */; };
+		4101F6FE1CF7775D00EEB7D4 /* MeasureNumber+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6FD1CF7775D00EEB7D4 /* MeasureNumber+Information.swift */; };
+		4101F7001CF77A6900EEB7D4 /* ConvertibleMeasure+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6FF1CF77A6900EEB7D4 /* ConvertibleMeasure+Products.swift */; };
+		4101F7021CF7844700EEB7D4 /* ConvertibleMeasure+ScalarProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F7011CF7844700EEB7D4 /* ConvertibleMeasure+ScalarProducts.swift */; };
+		4106650C1CF51285000815AA /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106650B1CF51285000815AA /* TemperatureTests.swift */; };
+		4106650E1CF555CB000815AA /* InformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106650D1CF555CB000815AA /* InformationTests.swift */; };
+		410665101CF5EFC6000815AA /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106650F1CF5EFC6000815AA /* TimeTests.swift */; };
 		414408FB1CEE816200898555 /* MeasureNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408FA1CEE816200898555 /* MeasureNumber.swift */; };
 		41B37EF91CE6C58200F6E5EF /* MeasuringCup.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41B37F001CE6C58200F6E5EF /* MeasuringCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */; };
-		41B37F101CE6C67C00F6E5EF /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F0F1CE6C67C00F6E5EF /* Measure.swift */; };
 		41B37F141CE6D95A00F6E5EF /* MeasureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */; };
-		41B37F161CE79ED300F6E5EF /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F151CE79ED300F6E5EF /* Unit.swift */; };
-		41B37F211CE84D2D00F6E5EF /* Scalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F201CE84D2D00F6E5EF /* Scalable.swift */; };
-		41B37F231CE8505E00F6E5EF /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F221CE8505E00F6E5EF /* Summable.swift */; };
-		41B37F2B1CE8B5C100F6E5EF /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */; };
 		41B37F2D1CEA24B200F6E5EF /* NIST44Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,19 +60,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		414408F81CED772800898555 /* MeasureSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureSystem.swift; sourceTree = "<group>"; };
-		414408FA1CEE816200898555 /* MeasureNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeasureNumber.swift; path = MeasuringCup/MeasureNumber.swift; sourceTree = SOURCE_ROOT; };
+		4101F6941CF6B7F600EEB7D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4101F6B01CF6E9B900EEB7D4 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
+		4101F6B11CF6E9B900EEB7D4 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureBasic.swift; sourceTree = "<group>"; };
+		4101F6B41CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+Comparable.swift"; sourceTree = "<group>"; };
+		4101F6B51CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+Hashable.swift"; sourceTree = "<group>"; };
+		4101F6B61CF6E9B900EEB7D4 /* ConvertibleMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleMeasure.swift; sourceTree = "<group>"; };
+		4101F6B71CF6E9B900EEB7D4 /* Measure+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measure+Comparable.swift"; sourceTree = "<group>"; };
+		4101F6B81CF6E9B900EEB7D4 /* Measure+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measure+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		4101F6B91CF6E9B900EEB7D4 /* Measure+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measure+Hashable.swift"; sourceTree = "<group>"; };
+		4101F6BA1CF6E9B900EEB7D4 /* Measure+ScalarProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measure+ScalarProducts.swift"; sourceTree = "<group>"; };
+		4101F6BB1CF6E9B900EEB7D4 /* Measure+Sums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measure+Sums.swift"; sourceTree = "<group>"; };
+		4101F6BC1CF6E9B900EEB7D4 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		4101F6BF1CF6E9B900EEB7D4 /* Volume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Volume.swift; sourceTree = "<group>"; };
+		4101F6D11CF6E9E200EEB7D4 /* ConvertibleUnitType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvertibleUnitType.swift; path = ../ConvertibleUnitType.swift; sourceTree = "<group>"; };
+		4101F6D61CF6E9E200EEB7D4 /* UnitType+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UnitType+Hashable.swift"; sourceTree = "<group>"; };
+		4101F6D71CF6E9E200EEB7D4 /* UnitType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
+		4101F6E51CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+Sums.swift"; sourceTree = "<group>"; };
+		4101F6E71CF744EB00EEB7D4 /* ConvertibleUnitType+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleUnitType+Hashable.swift"; sourceTree = "<group>"; };
+		4101F6E91CF7720700EEB7D4 /* Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
+		4101F6EB1CF7728F00EEB7D4 /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		4101F6ED1CF772F400EEB7D4 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		4101F6EF1CF7736A00EEB7D4 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		4101F6F11CF7742300EEB7D4 /* MeasureNumber+Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Length.swift"; sourceTree = "<group>"; };
+		4101F6F31CF7746F00EEB7D4 /* MeasureNumber+Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Mass.swift"; sourceTree = "<group>"; };
+		4101F6F51CF7757800EEB7D4 /* MeasureNumber+Volume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Volume.swift"; sourceTree = "<group>"; };
+		4101F6F71CF7762700EEB7D4 /* MeasureNumber+Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Area.swift"; sourceTree = "<group>"; };
+		4101F6F91CF7769000EEB7D4 /* MeasureNumber+Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Time.swift"; sourceTree = "<group>"; };
+		4101F6FB1CF7772400EEB7D4 /* MeasureNumber+Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Temperature.swift"; sourceTree = "<group>"; };
+		4101F6FD1CF7775D00EEB7D4 /* MeasureNumber+Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Information.swift"; sourceTree = "<group>"; };
+		4101F6FF1CF77A6900EEB7D4 /* ConvertibleMeasure+Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+Products.swift"; sourceTree = "<group>"; };
+		4101F7011CF7844700EEB7D4 /* ConvertibleMeasure+ScalarProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+ScalarProducts.swift"; sourceTree = "<group>"; };
+		4106650B1CF51285000815AA /* TemperatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
+		4106650D1CF555CB000815AA /* InformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTests.swift; sourceTree = "<group>"; };
+		4106650F1CF5EFC6000815AA /* TimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
+		414408FA1CEE816200898555 /* MeasureNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureNumber.swift; sourceTree = "<group>"; };
 		41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeasuringCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuringCup.h; sourceTree = "<group>"; };
 		41B37EFA1CE6C58200F6E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B37EFF1CE6C58200F6E5EF /* MeasuringCupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeasuringCupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B37F061CE6C58300F6E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41B37F0F1CE6C67C00F6E5EF /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureTests.swift; sourceTree = "<group>"; };
-		41B37F151CE79ED300F6E5EF /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
-		41B37F201CE84D2D00F6E5EF /* Scalable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scalable.swift; sourceTree = "<group>"; };
-		41B37F221CE8505E00F6E5EF /* Summable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summable.swift; sourceTree = "<group>"; };
-		41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIST44Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +124,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4101F6911CF6B25300EEB7D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				414408FA1CEE816200898555 /* MeasureNumber.swift */,
+				4101F6F11CF7742300EEB7D4 /* MeasureNumber+Length.swift */,
+				4101F6F71CF7762700EEB7D4 /* MeasureNumber+Area.swift */,
+				4101F6F31CF7746F00EEB7D4 /* MeasureNumber+Mass.swift */,
+				4101F6F51CF7757800EEB7D4 /* MeasureNumber+Volume.swift */,
+				4101F6FB1CF7772400EEB7D4 /* MeasureNumber+Temperature.swift */,
+				4101F6FD1CF7775D00EEB7D4 /* MeasureNumber+Information.swift */,
+				4101F6F91CF7769000EEB7D4 /* MeasureNumber+Time.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4101F6AF1CF6E9B900EEB7D4 /* Measures */ = {
+			isa = PBXGroup;
+			children = (
+				4101F6B31CF6E9B900EEB7D4 /* Protocols */,
+				4101F6B01CF6E9B900EEB7D4 /* Length.swift */,
+				4101F6B11CF6E9B900EEB7D4 /* Area.swift */,
+				4101F6BF1CF6E9B900EEB7D4 /* Volume.swift */,
+				4101F6E91CF7720700EEB7D4 /* Mass.swift */,
+				4101F6EB1CF7728F00EEB7D4 /* Information.swift */,
+				4101F6ED1CF772F400EEB7D4 /* Temperature.swift */,
+				4101F6EF1CF7736A00EEB7D4 /* Time.swift */,
+				4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */,
+			);
+			path = Measures;
+			sourceTree = "<group>";
+		};
+		4101F6B31CF6E9B900EEB7D4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4101F6BC1CF6E9B900EEB7D4 /* Measure.swift */,
+				4101F6B71CF6E9B900EEB7D4 /* Measure+Comparable.swift */,
+				4101F6B81CF6E9B900EEB7D4 /* Measure+CustomStringConvertible.swift */,
+				4101F6B91CF6E9B900EEB7D4 /* Measure+Hashable.swift */,
+				4101F6BA1CF6E9B900EEB7D4 /* Measure+ScalarProducts.swift */,
+				4101F6BB1CF6E9B900EEB7D4 /* Measure+Sums.swift */,
+				4101F6B61CF6E9B900EEB7D4 /* ConvertibleMeasure.swift */,
+				4101F6B41CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift */,
+				4101F6B51CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift */,
+				4101F7011CF7844700EEB7D4 /* ConvertibleMeasure+ScalarProducts.swift */,
+				4101F6E51CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift */,
+				4101F6FF1CF77A6900EEB7D4 /* ConvertibleMeasure+Products.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4101F6CF1CF6E9E200EEB7D4 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				4101F6D51CF6E9E200EEB7D4 /* Protocols */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
+		4101F6D51CF6E9E200EEB7D4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4101F6D71CF6E9E200EEB7D4 /* UnitType.swift */,
+				4101F6D61CF6E9E200EEB7D4 /* UnitType+Hashable.swift */,
+				4101F6D11CF6E9E200EEB7D4 /* ConvertibleUnitType.swift */,
+				4101F6E71CF744EB00EEB7D4 /* ConvertibleUnitType+Hashable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		41B37EEB1CE6C58200F6E5EF = {
 			isa = PBXGroup;
 			children = (
@@ -87,15 +214,13 @@
 		41B37EF71CE6C58200F6E5EF /* MeasuringCup */ = {
 			isa = PBXGroup;
 			children = (
-				41B37F151CE79ED300F6E5EF /* Unit.swift */,
-				414408F81CED772800898555 /* MeasureSystem.swift */,
-				41B37F2A1CE8B5C100F6E5EF /* UnitType.swift */,
-				41B37F0F1CE6C67C00F6E5EF /* Measure.swift */,
-				414408FA1CEE816200898555 /* MeasureNumber.swift */,
+				4101F6AF1CF6E9B900EEB7D4 /* Measures */,
+				4101F6CF1CF6E9E200EEB7D4 /* Units */,
+				4101F6911CF6B25300EEB7D4 /* Extensions */,
 				41B37F181CE82FDA00F6E5EF /* Properties */,
-				41B37F171CE82F6F00F6E5EF /* Units */,
 				41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */,
 				41B37EFA1CE6C58200F6E5EF /* Info.plist */,
+				4101F6941CF6B7F600EEB7D4 /* Constants.swift */,
 			);
 			path = MeasuringCup;
 			sourceTree = "<group>";
@@ -104,24 +229,18 @@
 			isa = PBXGroup;
 			children = (
 				41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */,
-				41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */,
 				41B37F061CE6C58300F6E5EF /* Info.plist */,
+				41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */,
+				4106650B1CF51285000815AA /* TemperatureTests.swift */,
+				4106650D1CF555CB000815AA /* InformationTests.swift */,
+				4106650F1CF5EFC6000815AA /* TimeTests.swift */,
 			);
 			path = MeasuringCupTests;
-			sourceTree = "<group>";
-		};
-		41B37F171CE82F6F00F6E5EF /* Units */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Units;
 			sourceTree = "<group>";
 		};
 		41B37F181CE82FDA00F6E5EF /* Properties */ = {
 			isa = PBXGroup;
 			children = (
-				41B37F221CE8505E00F6E5EF /* Summable.swift */,
-				41B37F201CE84D2D00F6E5EF /* Scalable.swift */,
 			);
 			name = Properties;
 			sourceTree = "<group>";
@@ -234,13 +353,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41B37F211CE84D2D00F6E5EF /* Scalable.swift in Sources */,
-				414408F91CED772800898555 /* MeasureSystem.swift in Sources */,
 				414408FB1CEE816200898555 /* MeasureNumber.swift in Sources */,
-				41B37F2B1CE8B5C100F6E5EF /* UnitType.swift in Sources */,
-				41B37F161CE79ED300F6E5EF /* Unit.swift in Sources */,
-				41B37F101CE6C67C00F6E5EF /* Measure.swift in Sources */,
-				41B37F231CE8505E00F6E5EF /* Summable.swift in Sources */,
+				4101F6C71CF6E9B900EEB7D4 /* Measure+CustomStringConvertible.swift in Sources */,
+				4101F6FC1CF7772400EEB7D4 /* MeasureNumber+Temperature.swift in Sources */,
+				4101F6C11CF6E9B900EEB7D4 /* Area.swift in Sources */,
+				4101F6C31CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift in Sources */,
+				4101F6DC1CF6E9E200EEB7D4 /* ConvertibleUnitType.swift in Sources */,
+				4101F6F61CF7757800EEB7D4 /* MeasureNumber+Volume.swift in Sources */,
+				4101F6C81CF6E9B900EEB7D4 /* Measure+Hashable.swift in Sources */,
+				4101F6E81CF744EB00EEB7D4 /* ConvertibleUnitType+Hashable.swift in Sources */,
+				4101F6951CF6B7F600EEB7D4 /* Constants.swift in Sources */,
+				4101F6C41CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift in Sources */,
+				4101F7001CF77A6900EEB7D4 /* ConvertibleMeasure+Products.swift in Sources */,
+				4101F6FA1CF7769000EEB7D4 /* MeasureNumber+Time.swift in Sources */,
+				4101F6F81CF7762700EEB7D4 /* MeasureNumber+Area.swift in Sources */,
+				4101F7021CF7844700EEB7D4 /* ConvertibleMeasure+ScalarProducts.swift in Sources */,
+				4101F6E01CF6E9E200EEB7D4 /* UnitType+Hashable.swift in Sources */,
+				4101F6EC1CF7728F00EEB7D4 /* Information.swift in Sources */,
+				4101F6C61CF6E9B900EEB7D4 /* Measure+Comparable.swift in Sources */,
+				4101F6FE1CF7775D00EEB7D4 /* MeasureNumber+Information.swift in Sources */,
+				4101F6F41CF7746F00EEB7D4 /* MeasureNumber+Mass.swift in Sources */,
+				4101F6C21CF6E9B900EEB7D4 /* MeasureBasic.swift in Sources */,
+				4101F6F21CF7742300EEB7D4 /* MeasureNumber+Length.swift in Sources */,
+				4101F6C01CF6E9B900EEB7D4 /* Length.swift in Sources */,
+				4101F6CE1CF6E9B900EEB7D4 /* Volume.swift in Sources */,
+				4101F6F01CF7736A00EEB7D4 /* Time.swift in Sources */,
+				4101F6CB1CF6E9B900EEB7D4 /* Measure.swift in Sources */,
+				4101F6CA1CF6E9B900EEB7D4 /* Measure+Sums.swift in Sources */,
+				4101F6EE1CF772F400EEB7D4 /* Temperature.swift in Sources */,
+				4101F6E61CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift in Sources */,
+				4101F6E11CF6E9E200EEB7D4 /* UnitType.swift in Sources */,
+				4101F6C51CF6E9B900EEB7D4 /* ConvertibleMeasure.swift in Sources */,
+				4101F6C91CF6E9B900EEB7D4 /* Measure+ScalarProducts.swift in Sources */,
+				4101F6EA1CF7720700EEB7D4 /* Mass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4106650C1CF51285000815AA /* TemperatureTests.swift in Sources */,
 				41B37F141CE6D95A00F6E5EF /* MeasureTests.swift in Sources */,
+				4106650E1CF555CB000815AA /* InformationTests.swift in Sources */,
+				410665101CF5EFC6000815AA /* TimeTests.swift in Sources */,
 				41B37F2D1CEA24B200F6E5EF /* NIST44Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
