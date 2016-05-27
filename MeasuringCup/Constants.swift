@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Tolerance {
+public enum Tolerance {
     static let absolute: Double = pow(10, -15)
     static let relative: Double = pow(10, -15)
 }
