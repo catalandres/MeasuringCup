@@ -29,9 +29,6 @@ public struct Information: ConvertibleMeasure {
         public var symbol: String {
             return Information.unitValues(self).symbol
         }
-        public var description: String {
-            return Information.unitValues(self).symbol
-        }
         public var factor: Double {
             return Information.unitValues(self).factor
         }
