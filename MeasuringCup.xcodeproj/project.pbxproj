@@ -10,7 +10,6 @@
 		4101F6951CF6B7F600EEB7D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6941CF6B7F600EEB7D4 /* Constants.swift */; };
 		4101F6C01CF6E9B900EEB7D4 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B01CF6E9B900EEB7D4 /* Length.swift */; };
 		4101F6C11CF6E9B900EEB7D4 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B11CF6E9B900EEB7D4 /* Area.swift */; };
-		4101F6C21CF6E9B900EEB7D4 /* MeasureBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */; };
 		4101F6C31CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B41CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift */; };
 		4101F6C41CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B51CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift */; };
 		4101F6C51CF6E9B900EEB7D4 /* ConvertibleMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101F6B61CF6E9B900EEB7D4 /* ConvertibleMeasure.swift */; };
@@ -70,7 +69,6 @@
 		4101F6941CF6B7F600EEB7D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4101F6B01CF6E9B900EEB7D4 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		4101F6B11CF6E9B900EEB7D4 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
-		4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureBasic.swift; sourceTree = "<group>"; };
 		4101F6B41CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+Comparable.swift"; sourceTree = "<group>"; };
 		4101F6B51CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+Hashable.swift"; sourceTree = "<group>"; };
 		4101F6B61CF6E9B900EEB7D4 /* ConvertibleMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertibleMeasure.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				4101F6EB1CF7728F00EEB7D4 /* Information.swift */,
 				4101F6ED1CF772F400EEB7D4 /* Temperature.swift */,
 				4101F6EF1CF7736A00EEB7D4 /* Time.swift */,
-				4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */,
 				416DAB181CFD3BD2002B38C2 /* Packaging.swift */,
 			);
 			path = Measures;
@@ -407,7 +404,6 @@
 				4101F6C61CF6E9B900EEB7D4 /* Measure+Comparable.swift in Sources */,
 				4101F6FE1CF7775D00EEB7D4 /* MeasureNumber+Information.swift in Sources */,
 				4101F6F41CF7746F00EEB7D4 /* MeasureNumber+Mass.swift in Sources */,
-				4101F6C21CF6E9B900EEB7D4 /* MeasureBasic.swift in Sources */,
 				4101F6F21CF7742300EEB7D4 /* MeasureNumber+Length.swift in Sources */,
 				4101F6C01CF6E9B900EEB7D4 /* Length.swift in Sources */,
 				4101F6CE1CF6E9B900EEB7D4 /* Volume.swift in Sources */,
