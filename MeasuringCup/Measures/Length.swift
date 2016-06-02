@@ -30,9 +30,6 @@ public struct Length: ConvertibleMeasure {
         public var symbol: String {
             return Length.unitValues(self).symbol
         }
-        public var description: String {
-            return Length.unitValues(self).symbol
-        }
         public var factor: Double {
             return Length.unitValues(self).factor
         }

@@ -17,6 +17,7 @@ public func *<T: Measure>(lhs: T, rhs: Float) -> T {
 public func *<T: Measure>(lhs: T, rhs: Int) -> T {
     return T(quantity: lhs.quantity * Double(rhs), unit: lhs.unit)
 }
+
 public func *<T: Measure>(lhs: Double, rhs: T) -> T {
     return rhs * lhs
 }
