@@ -1,12 +1,6 @@
 # MeasuringCup 📐
-<<<<<<< HEAD
 
----
-=======
 ####Cook up your units swiftly
-
-
->>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
 
 [![GitHub version](https://badge.fury.io/gh/catalandres%2FMeasuringCup.svg)](https://badge.fury.io/gh/catalandres%2FMeasuringCup)
 [![Build Status](https://travis-ci.org/catalandres/SwiftString.svg?branch=master)](https://travis-ci.org/catalandres/SwiftString)
@@ -51,4 +45,3 @@ If all this sounds overkill or too simplistic, please submit an issue or a pull 
 - [danielpi / Swift-Units](https://github.com/danielpi/Swift-Units)
 - [onmyway133 / Scale](https://github.com/onmyway133/Scale) 
 - [HKUnit](https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HKUnit_Class/) (you can also take a look at [this 2014 article](https://www.natashatherobot.com/healthkit-units/) by [Natasha Murashev](https://twitter.com/natashatherobot))
-- 
