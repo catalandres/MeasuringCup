@@ -21,7 +21,7 @@ public struct Packaging: Measure {
     }
     
     public enum Unit: UnitType {
-        case slices, boxes, servings, tubes, bottles, packs, bars, cartons, packets, jars, bags, canisters, barrels, cans, units, crates, pallets
+        case slices, boxes, servings, tubes, bottles, packs, bars, cartons, packets, jars, bags, canisters, barrels, cans, units, crates, pallets, items
         case bunches, bulbs, stems
         
         public var symbol: String {
@@ -75,6 +75,8 @@ public struct Packaging: Measure {
             return("bulb", "description.bulbs")
         case .stems:
             return("stem", "description.stems")
+        case .items:
+            return("item", "description.items")
         }
     }
     

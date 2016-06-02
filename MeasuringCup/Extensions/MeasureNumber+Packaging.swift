@@ -69,4 +69,7 @@ extension MeasureNumber {
     var stems: Packaging {
         return Packaging(quantity: self, unit: .stems)
     }
+    var items: Packaging {
+        return Packaging(quantity: self, unit: .items)
+    }
 }
