@@ -31,6 +31,9 @@ public struct Time: ConvertibleMeasure {
         public var symbol: String {
             return Time.unitValues(self).symbol
         }
+        public var description: String {
+            return Time.unitValues(self).symbol
+        }
         public var factor: Double {
             return Time.unitValues(self).factor
         }
