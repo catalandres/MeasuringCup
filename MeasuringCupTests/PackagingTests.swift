@@ -38,10 +38,7 @@ class PackagingTests: XCTestCase {
         XCTAssertEqual(1.bunches, Packaging(quantity: 1, unit: .bunches))
         XCTAssertEqual(1.bulbs, Packaging(quantity: 1, unit: .bulbs))
         XCTAssertEqual(1.stems, Packaging(quantity: 1, unit: .stems))
-<<<<<<< HEAD
         XCTAssertEqual(1.items, Packaging(quantity: 1, unit: .items))
-=======
->>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
     }
     
     func test_comparisons_shouldWork() {
@@ -157,12 +154,9 @@ class PackagingTests: XCTestCase {
         XCTAssertEqual(0.675.stems.description, "0.675 stems")
         XCTAssertEqual(1.stems.description, "1 stem")
         XCTAssertEqual(2.stems.description, "2 stems")
-<<<<<<< HEAD
         XCTAssertEqual(0.675.items.description, "0.675 items")
         XCTAssertEqual(1.items.description, "1 item")
         XCTAssertEqual(2.items.description, "2 items")
-=======
->>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
     }
     
 }

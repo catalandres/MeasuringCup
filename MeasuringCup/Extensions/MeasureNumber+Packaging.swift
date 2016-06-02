@@ -69,10 +69,7 @@ extension MeasureNumber {
     var stems: Packaging {
         return Packaging(quantity: self, unit: .stems)
     }
-<<<<<<< HEAD
     var items: Packaging {
         return Packaging(quantity: self, unit: .items)
     }
-=======
->>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
 }
