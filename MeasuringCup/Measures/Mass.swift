@@ -34,6 +34,9 @@ public struct Mass: ConvertibleMeasure {
         public var symbol: String {
             return Mass.unitValues(self).symbol
         }
+        public var description: String {
+            return Mass.unitValues(self).symbol
+        }
         public var factor: Double {
             return Mass.unitValues(self).factor
         }

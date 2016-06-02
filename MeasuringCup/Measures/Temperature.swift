@@ -26,6 +26,9 @@ public struct Temperature: ConvertibleMeasure {
         public var symbol: String {
             return Temperature.unitValues(self).symbol
         }
+        public var description: String {
+            return Temperature.unitValues(self).symbol
+        }
         public var factor: Double {
             return Temperature.unitValues(self).factor
         }

@@ -11,5 +11,6 @@ import Foundation
 public protocol UnitType: Hashable {
     
     var symbol: String { get }
+    var description: String { get }
     
 }
