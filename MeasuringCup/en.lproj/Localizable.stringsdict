@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>description.slices</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+			<string>g</string>
+			<key>one</key>
+			<string>%g slice</string>
+			<key>other</key>
+			<string>%g slices</string>
+		</dict>
+	</dict>
+    <key>description.boxes</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g box</string>
+            <key>other</key>
+            <string>%g boxes</string>
+        </dict>
+    </dict>
+    <key>description.servings</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g serving</string>
+            <key>other</key>
+            <string>%g servings</string>
+        </dict>
+    </dict>
+    <key>description.tubes</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g tube</string>
+            <key>other</key>
+            <string>%g tubes</string>
+        </dict>
+    </dict>
+    <key>description.bottles</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g bottle</string>
+            <key>other</key>
+            <string>%g bottles</string>
+        </dict>
+    </dict>
+    <key>description.packs</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g pack</string>
+            <key>other</key>
+            <string>%g packs</string>
+        </dict>
+    </dict>
+    <key>description.bars</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g bar</string>
+            <key>other</key>
+            <string>%g bars</string>
+        </dict>
+    </dict>
+    <key>description.cartons</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g carton</string>
+            <key>other</key>
+            <string>%g cartons</string>
+        </dict>
+    </dict>
+    <key>description.packets</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g packet</string>
+            <key>other</key>
+            <string>%g packets</string>
+        </dict>
+    </dict>
+    <key>description.jars</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g jar</string>
+            <key>other</key>
+            <string>%g jars</string>
+        </dict>
+    </dict>
+    <key>description.bags</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g bag</string>
+            <key>other</key>
+            <string>%g bags</string>
+        </dict>
+    </dict>
+    <key>description.canisters</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g canister</string>
+            <key>other</key>
+            <string>%g canisters</string>
+        </dict>
+    </dict>
+    <key>description.barrels</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g barrel</string>
+            <key>other</key>
+            <string>%g barrels</string>
+        </dict>
+    </dict>
+    <key>description.cans</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g can</string>
+            <key>other</key>
+            <string>%g cans</string>
+        </dict>
+    </dict>
+    <key>description.units</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g unit</string>
+            <key>other</key>
+            <string>%g units</string>
+        </dict>
+    </dict>
+    <key>description.crates</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g crate</string>
+            <key>other</key>
+            <string>%g crates</string>
+        </dict>
+    </dict>
+    <key>description.pallets</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g pallet</string>
+            <key>other</key>
+            <string>%g pallets</string>
+        </dict>
+    </dict>
+    <key>description.bunches</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g bunch</string>
+            <key>other</key>
+            <string>%g bunches</string>
+        </dict>
+    </dict>
+    <key>description.bulbs</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g bulb</string>
+            <key>other</key>
+            <string>%g bulbs</string>
+        </dict>
+    </dict>
+    <key>description.stems</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g stem</string>
+            <key>other</key>
+            <string>%g stems</string>
+        </dict>
+    </dict>
+    <key>description.items</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>g</string>
+            <key>one</key>
+            <string>%g item</string>
+            <key>other</key>
+            <string>%g items</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

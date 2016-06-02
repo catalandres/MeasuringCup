@@ -8,13 +8,14 @@
 
 import Foundation
 
-extension Measure {
+extension ConvertibleMeasure {
     
     public var description: String {
-        if let bundle = NSBundle(identifier: "com.ayre.MeasuringCup") {
-            return String.localizedStringWithFormat(NSLocalizedString(self.unit.description, tableName: nil, bundle: bundle , value: "", comment: ""), self.quantity)
+        if let quantityString = MeasureFormatter.service.stringFromNumber(self.quantity) {
+            return "\(quantityString) \(self.unit.symbol)"
         } else {
             return ""
         }
+        
     }
 }

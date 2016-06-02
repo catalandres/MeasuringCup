@@ -41,6 +41,9 @@ public struct Volume: ConvertibleMeasure {
         public var symbol: String {
             return Volume.unitValues(self).symbol
         }
+        public var description: String {
+            return Volume.unitValues(self).symbol
+        }
         public var factor: Double {
             return Volume.unitValues(self).factor
         }

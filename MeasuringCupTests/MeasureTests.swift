@@ -79,7 +79,7 @@ class MeasureTests: XCTestCase {
     
     func test_Description_ShouldPrintTheRightProperties() {
         XCTAssertEqual(fiftycm.description, "50 cm")
-        XCTAssertEqual(halfm.description, "0.50 m")
+        XCTAssertEqual(halfm.description, "0.5 m")
         XCTAssertEqual(onekm.description, "1 km")
     }
     
