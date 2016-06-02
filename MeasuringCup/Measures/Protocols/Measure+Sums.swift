@@ -16,5 +16,8 @@ public func +<T: Measure>(lhs: T, rhs: T) -> T? {
 }
 
 public func -<T: Measure>(lhs: T, rhs: T) -> T? {
+    print(lhs)
+    print((-1) * rhs)
+    print(lhs + (-1) * rhs)
     return lhs + (-1) * rhs
 }

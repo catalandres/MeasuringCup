@@ -9,12 +9,13 @@
 import Foundation
 
 extension Measure {
-    
     public var description: String {
-        if let bundle = NSBundle(identifier: "com.ayre.MeasuringCup") {
-            return String.localizedStringWithFormat(NSLocalizedString(self.unit.description, tableName: nil, bundle: bundle , value: "", comment: ""), self.quantity)
+        let quantityString: String
+        if self.quantity % 1 == 0 {
+            quantityString = String(Int(self.quantity))
         } else {
-            return ""
+            quantityString = String(format: "%.2f", self.quantity)
         }
+        return "\(quantityString) \(self.unit.symbol)"
     }
 }

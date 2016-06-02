@@ -30,9 +30,6 @@ public struct Area: ConvertibleMeasure {
         public var symbol: String {
             return Area.unitValues(self).symbol
         }
-        public var description: String {
-            return Area.unitValues(self).symbol
-        }
         public var factor: Double {
             return Area.unitValues(self).factor
         }

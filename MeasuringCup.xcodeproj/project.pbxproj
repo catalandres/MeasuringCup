@@ -43,17 +43,10 @@
 		4106650E1CF555CB000815AA /* InformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106650D1CF555CB000815AA /* InformationTests.swift */; };
 		410665101CF5EFC6000815AA /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106650F1CF5EFC6000815AA /* TimeTests.swift */; };
 		414408FB1CEE816200898555 /* MeasureNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414408FA1CEE816200898555 /* MeasureNumber.swift */; };
-		416DAB191CFD3BD2002B38C2 /* Packaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416DAB181CFD3BD2002B38C2 /* Packaging.swift */; };
 		41B37EF91CE6C58200F6E5EF /* MeasuringCup.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41B37F001CE6C58200F6E5EF /* MeasuringCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */; };
 		41B37F141CE6D95A00F6E5EF /* MeasureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */; };
 		41B37F2D1CEA24B200F6E5EF /* NIST44Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */; };
-		41BA28F21CFDD5050095A06D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41BA28F41CFDD5050095A06D /* Localizable.strings */; };
-		41BA28F51CFDD6140095A06D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 41BA28F71CFDD6140095A06D /* Localizable.stringsdict */; };
-		41BA28FB1CFFEAB20095A06D /* PackagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA28FA1CFFEAB20095A06D /* PackagingTests.swift */; };
-		41BA28FD1D00A2C30095A06D /* MeasureFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA28FC1D00A2C30095A06D /* MeasureFormatter.swift */; };
-		41BA28FF1D00A9400095A06D /* ConvertibleMeasure+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA28FE1D00A9400095A06D /* ConvertibleMeasure+CustomStringConvertible.swift */; };
-		41BA29011D00AD780095A06D /* MeasureNumber+Packaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA29001D00AD780095A06D /* MeasureNumber+Packaging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +96,6 @@
 		4106650D1CF555CB000815AA /* InformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTests.swift; sourceTree = "<group>"; };
 		4106650F1CF5EFC6000815AA /* TimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
 		414408FA1CEE816200898555 /* MeasureNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureNumber.swift; sourceTree = "<group>"; };
-		416DAB181CFD3BD2002B38C2 /* Packaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Packaging.swift; sourceTree = "<group>"; };
 		41B37EF51CE6C58200F6E5EF /* MeasuringCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeasuringCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B37EF81CE6C58200F6E5EF /* MeasuringCup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuringCup.h; sourceTree = "<group>"; };
 		41B37EFA1CE6C58200F6E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,12 +103,6 @@
 		41B37F061CE6C58300F6E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B37F131CE6D95A00F6E5EF /* MeasureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureTests.swift; sourceTree = "<group>"; };
 		41B37F2C1CEA24B100F6E5EF /* NIST44Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIST44Tests.swift; sourceTree = "<group>"; };
-		41BA28F31CFDD5050095A06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		41BA28F61CFDD6140095A06D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		41BA28FA1CFFEAB20095A06D /* PackagingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagingTests.swift; sourceTree = "<group>"; };
-		41BA28FC1D00A2C30095A06D /* MeasureFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeasureFormatter.swift; path = MeasuringCup/MeasureFormatter.swift; sourceTree = SOURCE_ROOT; };
-		41BA28FE1D00A9400095A06D /* ConvertibleMeasure+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConvertibleMeasure+CustomStringConvertible.swift"; sourceTree = "<group>"; };
-		41BA29001D00AD780095A06D /* MeasureNumber+Packaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeasureNumber+Packaging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +135,6 @@
 				4101F6FB1CF7772400EEB7D4 /* MeasureNumber+Temperature.swift */,
 				4101F6FD1CF7775D00EEB7D4 /* MeasureNumber+Information.swift */,
 				4101F6F91CF7769000EEB7D4 /* MeasureNumber+Time.swift */,
-				41BA29001D00AD780095A06D /* MeasureNumber+Packaging.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,7 +151,6 @@
 				4101F6ED1CF772F400EEB7D4 /* Temperature.swift */,
 				4101F6EF1CF7736A00EEB7D4 /* Time.swift */,
 				4101F6B21CF6E9B900EEB7D4 /* MeasureBasic.swift */,
-				416DAB181CFD3BD2002B38C2 /* Packaging.swift */,
 			);
 			path = Measures;
 			sourceTree = "<group>";
@@ -182,7 +166,6 @@
 				4101F6BB1CF6E9B900EEB7D4 /* Measure+Sums.swift */,
 				4101F6B61CF6E9B900EEB7D4 /* ConvertibleMeasure.swift */,
 				4101F6B41CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift */,
-				41BA28FE1D00A9400095A06D /* ConvertibleMeasure+CustomStringConvertible.swift */,
 				4101F6B51CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift */,
 				4101F7011CF7844700EEB7D4 /* ConvertibleMeasure+ScalarProducts.swift */,
 				4101F6E51CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift */,
@@ -210,15 +193,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		41A869E91CFD682500EE7F32 /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				41BA28F41CFDD5050095A06D /* Localizable.strings */,
-				41BA28F71CFDD6140095A06D /* Localizable.stringsdict */,
-			);
-			name = Localization;
-			sourceTree = "<group>";
-		};
 		41B37EEB1CE6C58200F6E5EF = {
 			isa = PBXGroup;
 			children = (
@@ -240,8 +214,6 @@
 		41B37EF71CE6C58200F6E5EF /* MeasuringCup */ = {
 			isa = PBXGroup;
 			children = (
-				41BA28FC1D00A2C30095A06D /* MeasureFormatter.swift */,
-				41A869E91CFD682500EE7F32 /* Localization */,
 				4101F6AF1CF6E9B900EEB7D4 /* Measures */,
 				4101F6CF1CF6E9E200EEB7D4 /* Units */,
 				4101F6911CF6B25300EEB7D4 /* Extensions */,
@@ -262,7 +234,6 @@
 				4106650B1CF51285000815AA /* TemperatureTests.swift */,
 				4106650D1CF555CB000815AA /* InformationTests.swift */,
 				4106650F1CF5EFC6000815AA /* TimeTests.swift */,
-				41BA28FA1CFFEAB20095A06D /* PackagingTests.swift */,
 			);
 			path = MeasuringCupTests;
 			sourceTree = "<group>";
@@ -365,8 +336,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41BA28F21CFDD5050095A06D /* Localizable.strings in Resources */,
-				41BA28F51CFDD6140095A06D /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +360,8 @@
 				4101F6C31CF6E9B900EEB7D4 /* ConvertibleMeasure+Comparable.swift in Sources */,
 				4101F6DC1CF6E9E200EEB7D4 /* ConvertibleUnitType.swift in Sources */,
 				4101F6F61CF7757800EEB7D4 /* MeasureNumber+Volume.swift in Sources */,
-				41BA29011D00AD780095A06D /* MeasureNumber+Packaging.swift in Sources */,
 				4101F6C81CF6E9B900EEB7D4 /* Measure+Hashable.swift in Sources */,
 				4101F6E81CF744EB00EEB7D4 /* ConvertibleUnitType+Hashable.swift in Sources */,
-				416DAB191CFD3BD2002B38C2 /* Packaging.swift in Sources */,
-				41BA28FD1D00A2C30095A06D /* MeasureFormatter.swift in Sources */,
 				4101F6951CF6B7F600EEB7D4 /* Constants.swift in Sources */,
 				4101F6C41CF6E9B900EEB7D4 /* ConvertibleMeasure+Hashable.swift in Sources */,
 				4101F7001CF77A6900EEB7D4 /* ConvertibleMeasure+Products.swift in Sources */,
@@ -413,7 +379,6 @@
 				4101F6CE1CF6E9B900EEB7D4 /* Volume.swift in Sources */,
 				4101F6F01CF7736A00EEB7D4 /* Time.swift in Sources */,
 				4101F6CB1CF6E9B900EEB7D4 /* Measure.swift in Sources */,
-				41BA28FF1D00A9400095A06D /* ConvertibleMeasure+CustomStringConvertible.swift in Sources */,
 				4101F6CA1CF6E9B900EEB7D4 /* Measure+Sums.swift in Sources */,
 				4101F6EE1CF772F400EEB7D4 /* Temperature.swift in Sources */,
 				4101F6E61CF6EAA000EEB7D4 /* ConvertibleMeasure+Sums.swift in Sources */,
@@ -431,7 +396,6 @@
 				4106650C1CF51285000815AA /* TemperatureTests.swift in Sources */,
 				41B37F141CE6D95A00F6E5EF /* MeasureTests.swift in Sources */,
 				4106650E1CF555CB000815AA /* InformationTests.swift in Sources */,
-				41BA28FB1CFFEAB20095A06D /* PackagingTests.swift in Sources */,
 				410665101CF5EFC6000815AA /* TimeTests.swift in Sources */,
 				41B37F2D1CEA24B200F6E5EF /* NIST44Tests.swift in Sources */,
 			);
@@ -446,25 +410,6 @@
 			targetProxy = 41B37F011CE6C58200F6E5EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		41BA28F41CFDD5050095A06D /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41BA28F31CFDD5050095A06D /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		41BA28F71CFDD6140095A06D /* Localizable.stringsdict */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41BA28F61CFDD6140095A06D /* en */,
-			);
-			name = Localizable.stringsdict;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		41B37F071CE6C58300F6E5EF /* Debug */ = {
