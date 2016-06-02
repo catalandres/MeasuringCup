@@ -8,8 +8,6 @@
 
 ## Main Features
 
-- A very complete list of units covered, both from the International System and from the customary and British unit system, representing length, area, volume (dry, fluid and generic volume), mass, temperature, information, time and more to come.
-=======
 - MeasuringCup covers a very complete list of units, both from the International System and from the customary and British unit system, representing **length**, **area**, **volume** (dry, fluid and generic volume), **mass**, **temperature**, **information** and **time**, with more to come.
 >>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
 - Easy to use, easy to read. MeasuringCup leverages Swift's potential for expressivity.
