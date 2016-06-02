@@ -9,7 +9,6 @@
 import Foundation
 
 public func +<T: ConvertibleMeasure>(lhs: T, rhs: T) -> T {
-    print("executed CM sum")
     guard lhs.unit != rhs.unit else {
         return T(quantity: lhs.quantity + rhs.quantity, unit: lhs.unit)
     }

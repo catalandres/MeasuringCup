@@ -13,7 +13,27 @@ public func ==<T: ConvertibleMeasure>(lhs: T, rhs: T) -> Bool {
     return abs(lhs.baseQuantity - rhs.baseQuantity) <= epsilon
 }
 
+public func !=<T: ConvertibleMeasure>(lhs: T, rhs: T) -> Bool {
+    let epsilon = max(Tolerance.absolute, Tolerance.relative * max(abs(lhs.baseQuantity), abs(rhs.baseQuantity)))
+    return abs(lhs.baseQuantity - rhs.baseQuantity) > epsilon
+}
+
 public func <<T: ConvertibleMeasure>(lhs: T, rhs: T) -> Bool {
     let epsilon = max(Tolerance.absolute, Tolerance.relative * max(abs(lhs.baseQuantity), abs(rhs.baseQuantity)))
     return lhs.baseQuantity - rhs.baseQuantity < epsilon && abs(lhs.baseQuantity - rhs.baseQuantity) > epsilon
+}
+
+public func <=<T: ConvertibleMeasure>(lhs: T, rhs: T) -> Bool {
+    let epsilon = max(Tolerance.absolute, Tolerance.relative * max(abs(lhs.baseQuantity), abs(rhs.baseQuantity)))
+    return lhs.baseQuantity - rhs.baseQuantity < epsilon
+}
+
+public func ><T: ConvertibleMeasure>(lhs: T, rhs: T) -> Bool {
+    let epsilon = max(Tolerance.absolute, Tolerance.relative * max(abs(lhs.baseQuantity), abs(rhs.baseQuantity)))
+    return rhs.baseQuantity - lhs.baseQuantity < epsilon && abs(lhs.baseQuantity - rhs.baseQuantity) > epsilon
+}
+
+public func >=<T: ConvertibleMeasure>(lhs: T, rhs: T) -> Bool {
+    let epsilon = max(Tolerance.absolute, Tolerance.relative * max(abs(lhs.baseQuantity), abs(rhs.baseQuantity)))
+    return rhs.baseQuantity - lhs.baseQuantity < epsilon
 }

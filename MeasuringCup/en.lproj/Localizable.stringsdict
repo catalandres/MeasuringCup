@@ -322,6 +322,7 @@
             <string>%g stems</string>
         </dict>
     </dict>
+<<<<<<< HEAD
     <key>description.items</key>
     <dict>
         <key>NSStringLocalizedFormatKey</key>
@@ -338,5 +339,7 @@
             <string>%g items</string>
         </dict>
     </dict>
+=======
+>>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
 </dict>
 </plist>

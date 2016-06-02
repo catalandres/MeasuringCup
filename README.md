@@ -1,6 +1,12 @@
 # MeasuringCup 📐
+<<<<<<< HEAD
 
 ---
+=======
+####Cook up your units swiftly
+
+
+>>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
 
 [![GitHub version](https://badge.fury.io/gh/catalandres%2FMeasuringCup.svg)](https://badge.fury.io/gh/catalandres%2FMeasuringCup)
 [![Build Status](https://travis-ci.org/catalandres/SwiftString.svg?branch=master)](https://travis-ci.org/catalandres/SwiftString)
@@ -9,7 +15,11 @@
 ## Main Features
 
 
+<<<<<<< HEAD
 - A very complete list of units covered, both from the International System and from the customary and British unit system, representing length, area, volume (dry, fluid and generic volume), mass, temperature, information, time and more to come.
+=======
+- MeasuringCup covers a very complete list of units, both from the International System and from the customary and British unit system, representing **length**, **area**, **volume** (dry, fluid and generic volume), **mass**, **temperature**, **information** and **time**, with more to come.
+>>>>>>> 0e9c024... Added packaging units, unit tests and pluralized strings
 - Easy to use, easy to read. MeasuringCup leverages Swift's potential for expressivity.
 
     ```swift
@@ -19,8 +29,13 @@
 - Whenever possible, handbooks and working documents from metrology organizations are used to run unit tests, provide code coverage and assure the conversion ratios are correct:
     - [National Institute of Standards and Technology Handbook 44, Appendix C,](http://www.nist.gov/pml/wmd/pubs/upload/appc-14-hb44-final.pdf) with general tables of units of measurement (length, area, volume and mass)
 - The framework defines operations between different magnitudes of measure. For example:
-    - If you multiply a length measure by another length measure you get an area measure
-    - If you divide a volume measure by an area measure you get a length measure
+
+    ```swift
+    1.meters is Length // true
+    1.squareMeters is Area // true
+    (1.meters * 1.squareMeters) is Volume // true
+    (1.liters / 1.decimeters) is Area // true
+    ```
 - All measurements and units are value-typed, based on `struct`s and `enum`s, which makes them thread-safe.
 
 - The framework can be extended to suit your needs

@@ -12,6 +12,22 @@ public func ==<T: Measure>(lhs: T, rhs: T) -> Bool {
     return lhs.unit == rhs.unit && lhs.quantity == rhs.quantity
 }
 
+public func !=<T: Measure>(lhs: T, rhs: T) -> Bool {
+    return lhs.unit != rhs.unit || lhs.quantity != rhs.quantity
+}
+
 public func <<T: Measure>(lhs: T, rhs: T) -> Bool {
     return lhs.unit == rhs.unit && lhs.quantity < rhs.quantity
+}
+
+public func <=<T: Measure>(lhs: T, rhs: T) -> Bool {
+    return lhs.unit == rhs.unit && lhs.quantity <= rhs.quantity
+}
+
+public func ><T: Measure>(lhs: T, rhs: T) -> Bool {
+    return lhs.unit == rhs.unit && lhs.quantity > rhs.quantity
+}
+
+public func >=<T: Measure>(lhs: T, rhs: T) -> Bool {
+    return lhs.unit == rhs.unit && lhs.quantity >= rhs.quantity
 }
